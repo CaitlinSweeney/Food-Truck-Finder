@@ -1,7 +1,7 @@
 /*Colorado Food Truck Finder*/
 
 body {
-    padding-top: 70px;
+    padding-top: 10px;
     /*background: linear-gradient(to left, #FF512F , #DD2476);*/
     font-family: 'Muli', sans-serif;
     color: #000;
@@ -18,17 +18,31 @@ body {
   padding-top: 10px;
 }
 
+.nav.navbar-nav.navbar-right{
+  padding-top: 60px;
+}
+
 .den{
   font-family: 'Bangers';
 }
 
-/*CONTENT*/
+/* CONTENT */
 
-.page-header{
-  padding-top: 10px;
+#main-header{
+  margin: auto;
+}
+#filters.btn-group.btn-group-vertical{
+  width: 100%;
 }
 
-/*MAP*/
+/* MAP */
+
+marker{
+
+}
+
+
+/* BOTTOM CONTENT */
 
 .portfolio-item {
     margin-bottom: 25px;
