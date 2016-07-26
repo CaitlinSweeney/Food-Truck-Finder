@@ -66,12 +66,24 @@
 					<div class="col-md-8">
 						<h2>Find your food truck</h2>
 
-						<ng-map center="40,-105" zoom="8">
+						<ng-map default-style="true" center="40,-105" zoom="8">
 
-							<marker title="{{loc.name}}" on-click="truck.showPopover(event, loc)" ng-repeat="loc in truck.allTrucks track by $index"
-							position= "{{ loc.location[0] }}, {{ loc.location[1] }}"	></marker>
+							<marker title="{{loc.name}}  {{loc.description}}" on-click="truck.showPopover(event, loc)" ng-repeat="loc in truck.allTrucks track by $index"
+							position= "{{loc.location[0]}}, {{loc.location[1]}}">
+
+							<info-window id="myInfoWindow" position= "{{loc.location[0]}}, {{loc.location[1]}}">
+								<div id="myInfoBox">
+								<h4 id="truckInfo">{{truck.name}}</h4>
+								<h4 id="truckInfo">{{truck.hours}}</h4>
+								</div>
+							</info-window>
+
+						</marker>
+<!-- {{truck.allTrucks[$index].name}} {{truck.allTrucks[$index].description}} -->
 
 						</ng-map>
+
+
 				</div>
 
             <div class="col-md-4">

@@ -37,8 +37,18 @@ body {
 
 /* MAP */
 
-marker{
+#truckInfo{
+  font-size: 10px;
+}
+.ng-map-info-window{
+  margin:auto;
+  /*left: 220px;*/
+}
 
+#myInfoBox{
+  margin:auto;
+  /*left:100px;*/
+  width:200px;
 }
 
 

@@ -12,7 +12,10 @@ function truckCtrl(NgMap, truckFactory){
     truck.lat = []
     truck.log = []
 
-    NgMap.getMap()
+    NgMap.getMap().then(function(map) {
+    truck.map = map;
+ });
+    // truck.map = map;
 
     truck.inputQuery = function(argument) {
         for(var i=0; i<truckFactory.trucks.length; i++){
@@ -24,29 +27,18 @@ function truckCtrl(NgMap, truckFactory){
         }
         console.log(truck.allTrucks);
         console.log(truck.truckSearch);
+  };
+        $('[title]').tooltip()
 
-          // $('[data-toggle="tooltip"]').tooltip()
-            $('[title]').tooltip()
-      };
-
-
-
-      truck.showPopover = function(){
-        console.log("working", arguments)
-        $(function () {
-          $('[data-toggle="popover"]').popover('show')
-        })
+    truck.showPopover = function(event, loc){
+        console.log("working", loc)
+        truck.name = loc.name
+        truck.description = loc.description
+        truck.hours = loc.hours
+        truck.map.showInfoWindow('myInfoWindow');
     }
 
   }; // END CONTROLLER
-
-      // truck.showDetail = function(event) {
-      //   truck.showInfoWindow('', truckData);
-      // }
-      // truck.hideDetail = function(event) {
-      //   truck.hideInfoWindow('', truckData);
-      // }
-
 
   truckCtrl.$inject = ['NgMap','truckFactory']
 
@@ -107,7 +99,7 @@ angular.module('myApp')
       },
       {
         name : "Corner of Gourmet",
-        description : "Their famous gyros, reuben egg rolls, pulled pork tacos, black bean burgers, and more, are made with the highest quality ingredients, a bit of love, and are all local legend.",
+        description : "Gyros, reuben egg rolls, pulled pork tacos, black bean burgers.",
         type : ['health food', 'tacos', 'sandwiches','vegetarian'],
         location : [39.899537, -105.113444], //['10385 Westmoor Dr, Westminster, CO 80021, USA, '80202']
         number : '#',
@@ -116,13 +108,32 @@ angular.module('myApp')
       },
       {
         name : "Amore Pizza",
-        description : "We are the home of Kick-Ass NY style Pizza Slice. Why is our pizza taste so good? its simple. Our dough is made fresh daily and the tomato sauce for our pizza is imported from the San marzano valley in Italy",
+        description : "Kick-Ass NY style Pizza Slices. Our dough is made fresh daily and the tomato sauce for our pizza is imported from the San marzano valley in Italy",
         type : ['hot food', 'pizza','vegetarian','Italian'],
         location : [39.726527, -104.998373], //['10385 Westmoor Dr, Westminster, CO 80021, USA, '80202']
         number : '(303) 952-9879',
         hours : 'Monday-Saturday 10:00 AM - 11:00 PM',
         website : 'https://www.facebook.com/AmorePizzaCo'
+      },
+      {
+        name : "new",
+        description : "",
+        type : [''],
+        location : [], //['10385 Westmoor Dr, Westminster, CO 80021, USA, '80202']
+        number : '(303) 952-9879',
+        hours : 'Tuesday 11am - 2pm',
+        website : ''
+      },
+      {
+        name : "Verde Food Truck",
+        description : "Verde is dedicated to serving authentic, fresh, flavorful, Sonoran Mexican street food to Boulder and the surrounding area.",
+        type : ['mexican', 'tacos', 'vegetarian', 'burritos'],
+        location : [40.030726, -105.257566], //['10385 Westmoor Dr, Westminster, CO 80021, USA, '80202']
+        number : '720-470-4348',
+        hours : 'Tuesday 11am - 2pm',
+        website : 'http://www.verdeboulder.com/Verde_Boulder.html'
       }]
+
       var activeTrucks = "Colorado Food Trucks"
       return {
         trucks : coTrucks
