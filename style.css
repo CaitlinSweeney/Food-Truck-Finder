@@ -1,0 +1,118 @@
+/*Colorado Food Truck Finder*/
+
+body {
+    margin: auto;
+    background-image: url('imgs/hand-held-sandy-color.jpg');
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 10px;
+    /*background: linear-gradient(to left, #FF512F , #DD2476);*/
+    font-family: 'Muli', sans-serif;
+    color: #fff;
+  }
+}
+
+/*NAVAGATION BAR*/
+
+.navbar-nav{
+  padding-top: 10px;
+}
+
+.navbar .navbar-top{
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar-brand{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  margin:0 auto;
+}
+
+.navbar-brand > img{
+  margin: inherit;
+  position: absolute;
+  display: inline;
+  transition: 1s;
+  top: -10px;
+}
+
+.navbar-brand > img:hover{
+  transform: rotate(-10deg) scale(1.5);
+}
+
+.navbar-toggle {
+    z-index:3;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+  padding-top: 20px;
+  /*border-bottom: 1px #fff solid;*/
+}
+
+.navbar .navbar-collapse a{
+  color: #fff
+}
+
+/* ClEAR */
+
+.clear-fix{
+  clear: both;
+  margin-bottom: 50px;
+  border-top: 1px #fff solid;
+}
+
+/* CONTENT */
+
+
+.den{
+  font-family: 'Bangers';
+}
+
+#main-header{
+
+}
+
+#filters.btn-group.btn-group-vertical{
+  width: 100%;
+}
+
+.btn-group button:hover{
+  color: #fff;
+  background-color: #EC008B;
+}
+
+/* MAP */
+
+#truckInfo{
+  font-size: 10px;
+}
+.ng-map{
+  height: 430px !important;
+}
+.ng-map-info-window{
+  /*margin:auto;*/
+  /*left: 220px;*/
+}
+
+#myInfoBox{
+  margin:auto;
+  /*left:100px;*/
+  width:200px;
+}
+
+
+/* BOTTOM CONTENT */
+
+.portfolio-item {
+    margin-bottom: 25px;
+}
+
+footer {
+    margin: 50px 0;
+}
