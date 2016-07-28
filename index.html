@@ -54,7 +54,7 @@
 			<div class="div-box1"></div>
 			<div class="div-box2"></div>
 			<div class="div-box2-2"></div>
-			<div class="div-box3"><h2>Pick Your Flavor!</h2></div>
+			<div class="div-box3"><h3>Veg-Heads to Meat-Heads</h3></div>
 			<div class="div-box4"></div>
 			<div class="mini-truck"></div>
 
@@ -87,6 +87,18 @@
 
 						</marker>
 
+						<marker title="{{loc.name}}  {{loc.description}}" on-click="truck.showPopover(event, loc)" ng-repeat="loc in truck.search | filter:search track by $index"
+						position= "{{loc.location[0]}}, {{loc.location[1]}}">
+
+						<info-window id="myInfoWindow" position= "{{loc.location[0]}}, {{loc.location[1]}}">
+							<div id="myInfoBox">
+							<h4 id="truckInfo">{{truck.name}}</h4>
+							<h4 id="truckInfo">{{truck.hours}}</h4>
+							</div>
+						</info-window>
+
+					</marker>
+
 						</ng-map>
 
 
@@ -95,9 +107,8 @@
             <div class="col-md-4">
                 <h3>Whatchu Cravin'?</h3>
                 <p>Bacon ipsum dolor amet sirloin bacon turkey jowl pancetta.</p>
-                <h3>Pick Your Flavor</h3>
-
-								<div id="filters" class="btn-group btn-group-vertical" role="group" aria-label="food types">
+                <h3>Pick Your Flavor!</h3>
+								<div id="filters" class="btn-group btn-group-vertical myButtons" role="group" aria-label="food types">
 								  <div class="btn-group" role="group">
 								    <button ng-click = "truck.inputQuery('sandwiches')" type="button" class="btn btn-default">Sandwiches</button>
 								  </div>
@@ -123,6 +134,17 @@
 										<button ng-click = "truck.inputQuery('dessert')" type="button" class="btn btn-default">Dessert</button>
 									</div>
 								</div>
+
+								<div id="custom-search-input">
+                <div class="input-group col-md-12">
+                    <input ng-model="search" type="text" class="form-control" placeholder="Search" />
+                    <span class="input-group-btn">
+                        <button ng-click="truck.inputQuery(search)"
+												class="btn btn-info" type="button">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
+                </div>  <!-- search trucks -->
 
             </div>
 

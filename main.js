@@ -12,12 +12,15 @@ function truckCtrl(NgMap, truckFactory){
     truck.randomTruck = []
     truck.fTruck =
     truck.gallery = []
+    truck.search = []
 
 // get google map
 
     NgMap.getMap().then(function(map) {
     truck.map = map;
  });
+
+// button click --> search categories
 
     truck.inputQuery = function(argument) {
         for(var i=0; i<truckFactory.trucks.length; i++){
@@ -27,6 +30,7 @@ function truckCtrl(NgMap, truckFactory){
             }
           }
         }
+
         console.log(truck.allTrucks);
         console.log(truck.truckSearch);
   };
@@ -73,6 +77,22 @@ function truckCtrl(NgMap, truckFactory){
         }
       }
       truck.newGallery()
+
+// search over truck.types factory
+
+    truck.typeSearch = function(str){
+      console.log('search works')
+      for(var i=0; i<truckFactory.trucks.length; i++){
+        for (var ii=0; ii<truckFactory.trucks[i].type.length; ii++){
+          if (truckFactory.trucks[i].type[ii] === str) {
+            truck.search.push(truckFactory.trucks[i])
+          }
+        }
+      }
+      console.log(truck.search)
+    }
+
+    truck.typeSearch()
 
   }; // controller
 
