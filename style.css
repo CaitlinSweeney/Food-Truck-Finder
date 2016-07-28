@@ -199,21 +199,23 @@ body {
 }
 
 @-webkit-keyframes mymove {
-    from {left: 0px;}
-    to {left: 400px;}
+    from {left: 249px;}
+    to {left: 690px;}
 }
 
 @keyframes mymove {
-    from {left: 0px;}
-    to {left: 400px;}
+    from {left: 249px;}
+    to {left: 690px;}
 }
 
 .mini-truck{
   position: absolute;
   top: 94px;
   left: 249px;
+  -webkit-animation: mymove 5s infinite;  /* Chrome, Safari, Opera */
+  animation: mymove 5s infinite;
   -webkit-animation-timing-function: ease;
-  animation-timing-function: ease; /* ease-out */
+  animation-timing-function: ease; /* ease-out
 }
 
 
@@ -225,4 +227,23 @@ body {
 
 footer {
     margin: 50px 0;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-device-width:720px){
+  .div-box1, .div-box2-2 {
+    display: none;
+  }
+  .div-box2, .div-box3, .div-box4 {
+    display: none;
+  }
+}
+@media only screen and (max-width:720px){
+  .div-box1, .div-box2-2 {
+    display: none;
+  }
+  .div-box2, .div-box3, .div-box4 {
+    display: none;
+  }
 }
