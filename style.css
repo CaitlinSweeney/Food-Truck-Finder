@@ -1,8 +1,24 @@
 /*Colorado Food Truck Finder*/
 
+/*NON-GOOGLE FONTS*/
+
+@font-face {
+  font-family: Nexa-Bold;
+  src: url('fonts/Nexa-Bold.otf');
+}
+@font-face {
+  font-family: Nexa-Light;
+  src: url('fonts/Nexa-Light.otf');
+}
+@font-face {
+  font-family: Chunkfive;
+  src: url('fonts/Chunkfive.otf');
+}
+
 body {
     margin: auto;
-    background-image: url('imgs/hand-held-sandy-color.jpg');
+    background-image: url('imgs/hand-held-sandy1.jpg');
+    /*background-image: url('imgs/hand-held-sandy-color.jpg');*/
     background-position:center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -79,7 +95,7 @@ body {
 }
 
 #filters.btn-group.btn-group-vertical{
-  width: 100%;
+  width: 70%;
 }
 
 .btn-group button:hover{
@@ -92,9 +108,71 @@ body {
 #truckInfo{
   font-size: 10px;
 }
-.ng-map{
-  height: 430px !important;
+
+/* BG ELEMENTS */
+
+.div-box1 {
+  position: absolute;
+  background-color: #ec008c;
+  width: 776px;
+  height: 362px;
+  opacity: 0.5;
+  top: 194px;
+  left: 45px;
+  box-shadow: 10px 30px 40px black;
+
 }
+.div-box2 {
+  position: absolute;
+  background-color: #fded18;
+  width: 360px;
+  height: 350px;
+  opacity: 0.5;
+  top: 230px;
+  left: 846px;
+  box-shadow: 10px 30px 40px black;
+}
+.div-box2-2 {
+  position: absolute;
+  background-color: #ec008c;
+  width: 500px;
+  height: 80px;
+  opacity: 0.5;
+  top: 853px;
+  left: 687px;
+  box-shadow: 10px 30px 40px black;
+}
+.div-box3 {
+  position: absolute;
+  background-color: #fded18;
+  width: 350px;
+  height: 90px;
+  opacity: 0.5;
+  top: 327px;
+  left: 969px;
+  box-shadow: 10px 30px 40px black;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);r
+}
+
+.div-box3 h2{
+  color: #000;
+  padding:5px 40px 0 0;
+  font-family: Chunkfive;
+}
+
+.div-box4 {
+  position: absolute;
+  background-color: #2b2c6b;
+  width: 1100px;
+  height: 117px;
+  opacity: 0.9;
+  top: 657px;
+  left: 60px;
+  box-shadow: 10px 30px 40px black;
+}
+
+
 .ng-map-info-window{
   /*margin:auto;*/
   /*left: 220px;*/

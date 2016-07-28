@@ -62,10 +62,6 @@ function truckCtrl(NgMap, truckFactory){
         console.log("random trucks", fTruck)
         return fTruck
       }
-        // truck.gallery.push(truck.randomTrucks())
-        // truck.gallery.push(truck.randomTrucks())
-        // truck.gallery.push(truck.randomTrucks())
-        // truck.gallery.push(truck.randomTrucks())
 
         console.log(truck.gallery)
 
@@ -112,7 +108,7 @@ angular.module('myApp')
         number : '(720) 934-4694',
         hours : 'Monday-Saturday: 11:00 AM - 03:00 PM',
         website : 'http://www.mcdevitttacosupply.com/',
-        image : "imgs/yellow-truck1.jpg"
+        image : "imgs/mcdevitt-taco-truck.jpg"
       },
       {
         name : "Biker Jim's Gourmet Dogs",
@@ -122,7 +118,7 @@ angular.module('myApp')
         number : '(303) 550-8231',
         hours : 'Monday-Friday 10:30 AM - 03:30 PM',
         website : 'http://www.bikerjimsdogs.com/',
-        image : "imgs/yellow-truck1.jpg"
+        image : "imgs/biker-jim.jpg"
       },
       {
         name : "Waffle Up!",
@@ -132,7 +128,7 @@ angular.module('myApp')
         number : '(303) 744-0174',
         hours : 'Tuesday - Friday 7AM- 2PM, Saturday- Sunday 8AM- 2PM',
         website : 'http://www.waffleup.com/',
-        image : "imgs/orange-truck1.jpg"
+        image : "imgs/waffleup.jpg"
       },
       {
         name : "Thai Cart",
@@ -149,10 +145,10 @@ angular.module('myApp')
         description : "Gyros, reuben egg rolls, pulled pork tacos, black bean burgers.",
         type : ['health food', 'tacos', 'sandwiches','vegetarian'],
         location : [39.899537, -105.113444], //['10385 Westmoor Dr, Westminster, CO 80021, USA, '80202']
-        number : '#',
+        number : '720-732-8203',
         hours : 'Monday-Friday 11:30 AM - 02:00 PM',
-        website : '',
-        image : "imgs/yellow-truck1.jpg"
+        website : 'http://www.cornerofgourmet.com/',
+        image : "imgs/corner-gourmet.jpg"
       },
       {
         name : "Amore Pizza",
@@ -172,18 +168,49 @@ angular.module('myApp')
         number : '(303) 952-9879',
         hours : 'Tuesday 11am - 2pm',
         website : '',
-        image : "imgs/orange-truck1.jpg"
+        image : "imgs/pbandj.jpg"
       },
       {
         name : "Verde Food Truck",
         description : "Verde is dedicated to serving authentic, fresh, flavorful, Sonoran Mexican street food to Boulder and the surrounding area.",
         type : ['mexican', 'tacos', 'vegetarian', 'burritos'],
-        location : [40.030726, -105.257566], //['10385 Westmoor Dr, Westminster, CO 80021, USA, '80202']
+        location : [40.030726, -105.257566],
         number : '720-470-4348',
         hours : 'Tuesday 11am - 2pm',
-        website : 'http://www.verdeboulder.com/Verde_Boulder.html',
-        image : "imgs/white-truck1.jpg"
-      }]
+        website : 'https://www.facebook.com/VerdeMexicanFoodTruck/',
+        image : "imgs/verde-truck.jpg"
+      },
+      {
+        name : "Saj Mediterranean Grill",
+        description : "Fresh, natural and healthy Mediterranean cuisine in a fast-casual environment.",
+        type : ['greek', 'mediterranean','middle eastern', 'vegan', 'vegetarian'],
+        location : [39.590832, -104.962217],
+        number : '(303) 790-8001',
+        hours : 'Monday-Friday 10am - 9pm, Sunday  10am -8pm',
+        website : 'https://www.facebook.com/SajCentennial/posts/10153474815728145',
+        image : "imgs/yummer-truck.jpg"
+      },
+      {
+        name : "R U Cereal Food Truck",
+        description : "Breakfast meets Dessert… Falls in love… Has food truck love child.. And R U Cereal Food Truck is born",
+        type : ['breakfast', 'cereal','dessert', 'vegan', 'gluten-free'],
+        location : [39.590832, -104.962217],
+        number : '720-217-3550',
+        hours : 'Monday-Friday 10am - 9pm, Sunday  10am -8pm',
+        website : 'http://www.rucerealfoodtruck.com/',
+        image : "imgs/cereal-truck.jpg"
+      },
+      {
+        name : "Mile High Thai",
+        description : "Thai food sourced only the best ingredients with herbs, spices directly from Thailand for our sweet soy sauce. Delivery Available",
+        type : ['asian','druken-noodles', 'vegan', 'vegetarian', 'pad-thai', 'egg rolls', 'gluten-free'],
+        location : [39.761898, -104.981534],
+        number : '(720) 551-9590',
+        hours : 'Mon:	5:00pm - 9:00pm, Tue: 10:30am - 2:00pm, Wed-Fri: 5:00pm - 10:00pm, Sat-Sun 3:00pm - 9:00pm',
+        website : 'http://www.milehighthai.com',
+        image : "imgs/mile-high-thai.jpg"
+      }
+    ]
 
       var activeTrucks = "Colorado Food Trucks"
       return {
