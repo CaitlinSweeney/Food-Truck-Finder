@@ -163,7 +163,7 @@ angular.module('myApp')
       {
         name : "Corner of Gourmet",
         description : "Gyros, reuben egg rolls, pulled pork tacos, black bean burgers.",
-        type : ['health food', 'tacos', 'sandwiches','vegetarian'],
+        type : ['healthy food', 'tacos', 'sandwiches','vegetarian'],
         location : [39.899537, -105.113444], //['10385 Westmoor Dr, Westminster, CO 80021, USA, '80202']
         number : '720-732-8203',
         hours : 'Monday-Friday 11:30 AM - 02:00 PM',
