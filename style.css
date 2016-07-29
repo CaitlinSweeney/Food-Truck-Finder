@@ -95,6 +95,8 @@ body {
 
 #filters.btn-group.btn-group-vertical{
   width: 70%;
+  padding-left: 15px;
+  padding-top: 15px;
 }
 
 .btn-group button:hover{
@@ -110,6 +112,7 @@ body {
 #custom-search-input{
   margin-top:2%;
   width: 70%;
+  padding-left: 15px;
 }
 #custom-search-input button{
   background-color: #2b2c6b;
@@ -134,27 +137,30 @@ body {
   width:200px;
 }
 
+.map-header{
+  margin-bottom: 0px;
+}
 /* BG ELEMENTS */
 
 .div-box1 {
   position: absolute;
   background-color: #ec008c;
-  width: 776px;
-  height: 387px;
+  width: 877px;
+  height: 398px;
   opacity: 0.5;
-  top: 194px;
-  left: 45px;
+  top: 193px;
+  left: 35px;
   box-shadow: -25px 37px 40px black;
 
 }
 .div-box2 {
   position: absolute;
   background-color: #fded18;
-  width: 373px;
+  width: 401px;
   height: 370px;
   opacity: 0.5;
-  top: 211px;
-  left: 826px;
+  top: 200px;
+  left: 836px;
   box-shadow: 10px 25px 40px black;
 }
 .div-box2-2 {
@@ -174,7 +180,7 @@ body {
   height: 66px;
   opacity: 0.8;
   top: 333px;
-  left: 972px;
+  left: 997px;
   box-shadow: 10px 30px 40px black;
   transform: rotate(90deg);
   -webkit-transform: rotate(90deg);r
@@ -225,9 +231,21 @@ body {
     margin-bottom: 25px;
 }
 
+.featured-trucks{
+  padding-top: 20px;
+}
+
 footer {
     margin: 50px 0;
 }
+
+.list-footer a{
+  color: #fff;
+}
+.list-footer a:hover{
+  color: #000;
+}
+
 
 /* MEDIA QUERIES */
 
