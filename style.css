@@ -78,21 +78,15 @@ body {
   color: #000
 }
 
-/* ClEAR */
-
-.clear-fix{
-  clear: both;
-  margin-bottom: 50px;
-  border-top: 1px #fff solid;
-}
-
 /* CONTENT */
-
 
 .headline{
   font-family: 'Chunkfive';
 }
 
+.left-nav h3{
+  padding-top: 5px;
+}
 #filters.btn-group.btn-group-vertical{
   width: 70%;
   padding-left: 15px;
