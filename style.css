@@ -151,7 +151,7 @@ body {
   position: absolute;
   background-color: #fded18;
   width: 401px;
-  height: 370px;
+  height: 381px;
   opacity: 0.5;
   top: 200px;
   left: 836px;
@@ -161,9 +161,9 @@ body {
   position: absolute;
   background-color: #ec008c;
   width: 500px;
-  height: 80px;
+  height: 60px;
   opacity: 0.5;
-  top: 850px;
+  top: 859px;
   left: 687px;
   box-shadow: 10px 30px 40px black;
 }
@@ -231,15 +231,24 @@ body {
 
 footer {
     margin: 50px 0;
+    color: #fff;
+}
+
+.copyright p{
+    float: left;
+}
+
+.list-footer{
+  display: inline;
 }
 
 .list-footer a{
   color: #fff;
 }
-.list-footer a:hover{
-  color: #000;
-}
 
+.list-footer a:hover{
+  color: #fff;
+}
 
 /* MEDIA QUERIES */
 
