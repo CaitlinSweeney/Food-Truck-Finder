@@ -9,14 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CaitlinSweeney/CO-Food-Trucks.git"
+    "url": "git+https://github.com/CaitlinSweeney/Food-Truck-Finder.git"
   },
   "author": "caitlin-sweeney",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CaitlinSweeney/CO-Food-Trucks/issues"
+    "url": "https://github.com/CaitlinSweeney/Food-Truck-Finder.git/issues"
   },
-  "homepage": "https://github.com/CaitlinSweeney/CO-Food-Trucks#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
     "colors": "^1.1.2",
