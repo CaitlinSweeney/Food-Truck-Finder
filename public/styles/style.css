@@ -116,13 +116,14 @@ body {
 }
 /* MAP */
 
+#map{
+  width: 740px;
+  height: 400px;
+}
+
 #truckInfo{
   font-size: 10px;
   color: #000;
-}
-.ng-map-info-window{
-  /*margin:auto;*/
-  /*left: 220px;*/
 }
 
 #myInfoBox{
@@ -140,7 +141,7 @@ body {
   position: absolute;
   background-color: #ec008c;
   width: 877px;
-  height: 398px;
+  height: 500px;
   opacity: 0.5;
   top: 193px;
   left: 35px;

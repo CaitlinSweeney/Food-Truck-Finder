@@ -2,10 +2,10 @@
 
 angular.module('myApp', []);
 
-angular.module('myApp', ['ngMap'])
+angular.module('myApp')
 .controller('truckCtrl', truckCtrl);
 
-function truckCtrl(NgMap, truckFactory){
+function truckCtrl(truckFactory){
     var truck = this;
     truck.allTrucks = []
     truck.featuredTrucks = []
@@ -13,14 +13,12 @@ function truckCtrl(NgMap, truckFactory){
     truck.fTruck =
     truck.gallery = []
     truck.search = []
-
-// get google map
-
-    NgMap.getMap().then(function(map) {
-    truck.map = map;
- });
+    truck.map;
 
 // button click --> search categories
+
+// Initialize Google Maps api
+
 
     truck.inputQuery = function(argument) {
         for(var i=0; i<truckFactory.trucks.length; i++){
@@ -34,17 +32,17 @@ function truckCtrl(NgMap, truckFactory){
         console.log(truck.allTrucks);
         console.log(truck.truckSearch);
   };
-        $('[title]').tooltip()
+        // $('[title]').tooltip()
 
 // get map markers
 
-    truck.showPopover = function(event, loc){
-        console.log("working", loc)
-        truck.name = loc.name
-        truck.description = loc.description
-        truck.hours = loc.hours
-        truck.map.showInfoWindow('myInfoWindow');
-    }
+    // truck.showPopover = function(event, loc){
+    //     console.log("working", loc)
+    //     truck.name = loc.name
+    //     truck.description = loc.description
+    //     truck.hours = loc.hours
+    //     truck.map.showInfoWindow('myInfoWindow');
+    // }
 
 // push images from coTrucks array
 
@@ -96,7 +94,7 @@ function truckCtrl(NgMap, truckFactory){
 
   }; // controller
 
-  truckCtrl.$inject = ['NgMap','truckFactory']
+  truckCtrl.$inject = ['truckFactory']
 
 // END CONTROLLER
 
@@ -118,7 +116,7 @@ angular.module('myApp')
         number : '(720) 934-4694',
         hours : 'Monday-Friday: 10:00 AM - 10:00 PM',
         website : 'https://www.facebook.com/StreetFrites/',
-        image : "imgs/orange-truck1.jpg"
+        image : "styles/imgs/orange-truck1.jpg"
       },
       {
         name : 'McDevitt Taco Supply',
@@ -128,7 +126,7 @@ angular.module('myApp')
         number : '(720) 934-4694',
         hours : 'Monday-Saturday: 11:00 AM - 03:00 PM',
         website : 'http://www.mcdevitttacosupply.com/',
-        image : "imgs/mcdevitt-taco-truck.jpg"
+        image : "styles/imgs/mcdevitt-taco-truck.jpg"
       },
       {
         name : "Biker Jim's Gourmet Dogs",
@@ -138,7 +136,7 @@ angular.module('myApp')
         number : '(303) 550-8231',
         hours : 'Monday-Friday 10:30 AM - 03:30 PM',
         website : 'http://www.bikerjimsdogs.com/',
-        image : "imgs/biker-jim.jpg"
+        image : "styles/imgs/biker-jim.jpg"
       },
       {
         name : "Waffle Up!",
@@ -148,7 +146,7 @@ angular.module('myApp')
         number : '(303) 744-0174',
         hours : 'Tuesday - Friday 7AM- 2PM, Saturday- Sunday 8AM- 2PM',
         website : 'http://www.waffleup.com/',
-        image : "imgs/waffleup.jpg"
+        image : "styles/imgs/waffleup.jpg"
       },
       {
         name : "Thai Cart",
@@ -158,7 +156,7 @@ angular.module('myApp')
         number : '#',
         hours : 'Unknown',
         website : 'twitter: @thaicart80202',
-        image : "imgs/white-truck1.jpg"
+        image : "styles/imgs/white-truck1.jpg"
       },
       {
         name : "Corner of Gourmet",
@@ -168,7 +166,7 @@ angular.module('myApp')
         number : '720-732-8203',
         hours : 'Monday-Friday 11:30 AM - 02:00 PM',
         website : 'http://www.cornerofgourmet.com/',
-        image : "imgs/corner-gourmet.jpg"
+        image : "styles/imgs/corner-gourmet.jpg"
       },
       {
         name : "Amore Pizza",
@@ -178,7 +176,7 @@ angular.module('myApp')
         number : '(303) 952-9879',
         hours : 'Monday-Saturday 10:00 AM - 11:00 PM',
         website : 'https://www.facebook.com/AmorePizzaCo',
-        image : "imgs/white-truck1.jpg"
+        image : "styles/imgs/white-truck1.jpg"
       },
       {
         name : "Hey P+J",
@@ -188,7 +186,7 @@ angular.module('myApp')
         number : '(303) 952-9879',
         hours : 'Tuesday 11am - 2pm',
         website : '',
-        image : "imgs/pbandj.jpg"
+        image : "styles/imgs/pbandj.jpg"
       },
       {
         name : "Verde Food Truck",
@@ -198,7 +196,7 @@ angular.module('myApp')
         number : '720-470-4348',
         hours : 'Tuesday 11am - 2pm',
         website : 'https://www.facebook.com/VerdeMexicanFoodTruck/',
-        image : "imgs/verde-truck.jpg"
+        image : "styles/imgs/verde-truck.jpg"
       },
       {
         name : "Saj Mediterranean Grill",
@@ -208,7 +206,7 @@ angular.module('myApp')
         number : '(303) 790-8001',
         hours : 'Monday-Friday 10am - 9pm, Sunday  10am -8pm',
         website : 'https://www.facebook.com/SajCentennial/posts/10153474815728145',
-        image : "imgs/yummer-truck.jpg"
+        image : "styles/imgs/yummer-truck.jpg"
       },
       {
         name : "R U Cereal Food Truck",
@@ -218,7 +216,7 @@ angular.module('myApp')
         number : '720-217-3550',
         hours : 'Monday-Friday 10am - 9pm, Sunday  10am -8pm',
         website : 'http://www.rucerealfoodtruck.com/',
-        image : "imgs/cereal-truck.jpg"
+        image : "styles/imgs/cereal-truck.jpg"
       },
       {
         name : "Mile High Thai",
@@ -228,7 +226,7 @@ angular.module('myApp')
         number : '(720) 551-9590',
         hours : 'Mon:	5:00pm - 9:00pm, Tue: 10:30am - 2:00pm, Wed-Fri: 5:00pm - 10:00pm, Sat-Sun 3:00pm - 9:00pm',
         website : 'http://www.milehighthai.com',
-        image : "imgs/mile-high-thai.jpg"
+        image : "styles/imgs/mile-high-thai.jpg"
       }
     ]
 
@@ -237,41 +235,3 @@ angular.module('myApp')
         trucks : coTrucks
       }
   };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // angular.module('myApp')
-  // 	.factory('foursquareFactory', [
-  // 		'$http',
-  // 		foursquareData
-  // 	])
-  //
-  // function foursquareData ($http) {
-  //
-  // 	return {
-  // 		getFSdata : function(){
-  // 			return $http.get()
-  // 		},
-  // 		getFSindex : function(){
-  // 			return $http.get('https://api.foursquare.com/v2/venues/search?ll=40.7,-74&client_id=3YUN053JNTTGMQVMGLH3JKY4BIICP54ZKD2VB2EKT4SI4WJH&client_secret=IRGCPMLW2DGG0TY5APBADYR3JOG2MSAXVKX0LPKX1VC3KNRO&v=YYYYMMDD')
-  // 		}
-  // 	}
-  // }
