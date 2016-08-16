@@ -9,20 +9,8 @@
   <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-route.min.js'></script>
-	<script>
-	var map;
-	function initialize(map) {
-		console.log("my map");
-		map = new google.maps.Map(document.getElementById('map'), {
-			zoom: 9,
-			center: new google.maps.LatLng(39.7392,-104.9903),
-			mapTypeId: 'terrain'
-		});
-	}
-	</script>
+  <script src="https://use.fontawesome.com/be718bed0f.js"></script>
   <script src="js/main.js" type="text/javascript"></script>
-	<script src="js/api.js" type="text/javascript"></script>
-
 
 	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'/>
 	<link href='https://fonts.googleapis.com/css?family=Roboto|Lato|Oswald|Muli|Cabin|Abel|Josefin+Sans|Ubuntu+Condensed|Bangers' rel='stylesheet' type='text/css'>
@@ -63,13 +51,11 @@
     <div class="container">
 
   <!-- BG Elements-->
-			<div class="div-box1"></div>
+			<!-- <div class="div-box1"></div>
 			<div class="div-box2"></div>
 			<div class="div-box2-2"></div>
 			<div class="div-box3"><h3>Veg-Heads to Meat-Heads</h3></div>
-			<div class="div-box4"></div>
-
-        <!-- MAP -->
+			<div class="div-box4"></div> -->
 
 <div class= "col md-8"></div>
 <div class="row">
@@ -121,22 +107,22 @@
 
         </div><!-- button and search -->
 
-				<div class="col-md-8">
+				<div class="col-md-8 mapheader">
 					<h2 class="headline">Tasty Street Eatin'</h2>
 					<p>Bringing you Colorado's finest food truck details and information.</p>
 
 					<h3 class="map-header">Find your food truck</h3>
 					<img class="mini-truck" src="styles/imgs/mini-truck.png"><img>
 
+	  <!-- MAP -->
 					<div id="map"></div>
+				</div>
+
+				<div>
 
 				</div>
 
-				<div>   <!-- Featured Trucks -->
-
-				</div>
-
-        <!-- Related Projects Row -->
+        <!-- Featured Trucks -->
         <div class="row">
 
             <div class="col-lg-12 featured-">
@@ -153,8 +139,6 @@
         <!-- /.row -->
 
         <hr>
-
-
 
         <!-- Footer -->
         <footer>
@@ -179,7 +163,7 @@
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 		<script
-			 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUS3Er-vaSP_skHC0TpPOR4WNHHE55stE&callback=initialize">
+			 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUS3Er-vaSP_skHC0TpPOR4WNHHE55stE">
 	 </script>
 </body>
 

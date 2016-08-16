@@ -10,15 +10,27 @@ function truckCtrl(truckFactory){
     truck.allTrucks = []
     truck.featuredTrucks = []
     truck.randomTruck = []
-    truck.fTruck =
+    truck.fTruck;
     truck.gallery = []
     truck.search = []
-    truck.map;
+    // map variables
+    // truck.myLatLng;
+    truck.map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 9,
+      center: new google.maps.LatLng(39.7392,-104.9903),
+      mapTypeId: 'terrain',
+    });
+    truck.icon = 'https://maps.google.com/mapfiles/ms/icons/green-dot.png'
+    truck.marker = new google.maps.Marker({
+      position: new google.maps.LatLng(39.7392,-104.9903),
+      map: truck.map,
+      icon: truck.icon
+    });
+    truck.infoWindow = new google.maps.InfoWindow({map: map});
 
-// button click --> search categories
+// google maps gelocation
 
-// Initialize Google Maps api
-
+// Interate over truck factory
 
     truck.inputQuery = function(argument) {
         for(var i=0; i<truckFactory.trucks.length; i++){
@@ -64,7 +76,6 @@ function truckCtrl(truckFactory){
         console.log("random trucks", fTruck)
         return fTruck
       }
-
         console.log(truck.gallery)
 
 // iterate over array gallery
@@ -97,6 +108,8 @@ function truckCtrl(truckFactory){
   truckCtrl.$inject = ['truckFactory']
 
 // END CONTROLLER
+
+
 
 // Start TRUCK FACTORY //
 

@@ -82,13 +82,16 @@ body {
 
 .headline{
   font-family: 'Chunkfive';
+  text-align: right;
 }
-
+.mapheader p{
+  text-align: right;
+}
 .left-nav h3{
   padding-top: 5px;
 }
 #filters.btn-group.btn-group-vertical{
-  width: 70%;
+  width: 90%;
   padding-left: 15px;
   padding-top: 15px;
 }
@@ -105,7 +108,7 @@ body {
 
 #custom-search-input{
   margin-top:2%;
-  width: 70%;
+  width: 90%;
   padding-left: 15px;
 }
 #custom-search-input button{
