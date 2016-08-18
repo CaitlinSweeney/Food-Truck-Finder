@@ -7,7 +7,7 @@ truckCtrl.$inject = ['truckFactory']
 
 function truckCtrl(truckFactory){
     var truck = this;
-    truck.allTrucks = []
+    truck.allMarkers = []
     truck.featuredTrucks = []
     truck.randomTruck = []
     truck.fTruck;
@@ -21,11 +21,7 @@ function truckCtrl(truckFactory){
       mapTypeId: 'terrain',
     });
     truck.icon = 'https://maps.google.com/mapfiles/ms/icons/green-dot.png'
-    // truck.marker = new google.maps.Marker({
-    //   position: new google.maps.LatLng(39.7392,-104.9903),
-    //   map: truck.map,
-    //   icon: truck.icon
-    // });
+
     // truck.infoWindow = new google.maps.InfoWindow({
     //   map: truck.map,
     //   position: truck.marker.position,
@@ -41,15 +37,13 @@ function truckCtrl(truckFactory){
           for (var ii=0; ii<truckFactory.trucks[i].type.length; ii++){
             if (truckFactory.trucks[i].type[ii] === argument) {
               var t = truckFactory.trucks[i]
-              truck.allTrucks.push(truck.t)
               truck.marker = new google.maps.Marker({
                 position: new google.maps.LatLng(t.location[0], t.location[1]),
                 map: truck.map,
-                icon: truck.icon
-              });
-              truck.clearQuery = function(event){
-                truck.marker.location[null];
-              }
+                icon: truck.icon,
+              }); // put markers in array
+              truck.allMarkers.push(truck.marker);
+
               // truck.infoWindow = new google.maps.InfoWindow({
               //   map: truck.map,
               //   position: truck.marker.position,
@@ -57,12 +51,15 @@ function truckCtrl(truckFactory){
             }
           }
         }
-        console.log(truck.allTrucks);
+        console.log(truck.allMarkers);
         console.log(truck.truckSearch);
-        console.log(t.location)
+        console.log(t.location);
   };
-// remove markers
-
+    truck.clearMarkers = function(){
+      for(i=0; i < truck.allMarkers.length; i++){
+        truck.allMarkers[i].setMap(null);
+      }
+  }
 
         // $('[title]').tooltip()
 
@@ -123,6 +120,6 @@ function truckCtrl(truckFactory){
 
   }; // controller
 
-  truckCtrl.$inject = ['truckFactory']
+  // truckCtrl.$inject = ['truckFactory']
 
 // END CONTROLLER

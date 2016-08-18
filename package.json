@@ -17,11 +17,15 @@
     "url": "https://github.com/CaitlinSweeney/Food-Truck-Finder.git/issues"
   },
   "dependencies": {
+    "bcryptjs": "^2.3.0",
     "body-parser": "^1.15.2",
+    "client-sessions": "^0.7.0",
     "colors": "^1.1.2",
+    "ejs": "^2.5.1",
     "express": "^4.14.0",
     "mongoose": "^4.5.8",
     "morgan": "^1.7.0",
-    "request": "^2.74.0"
+    "request": "^2.74.0",
+    "routes": "^2.1.0"
   }
 }
