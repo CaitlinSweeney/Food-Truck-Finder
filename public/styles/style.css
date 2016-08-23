@@ -28,7 +28,7 @@ body {
     font-family: 'Muli', sans-serif;
     color: #fff;
   }
-}
+
 
 /*SIDE BAR*/
 
@@ -216,6 +216,7 @@ body {
 #map{
   width: 740px;
   height: 400px;
+  color: #000;
 }
 
 #truckInfo{
@@ -347,6 +348,7 @@ footer {
 .list-footer a:hover{
   color: #fff;
 }
+
 
 /* MEDIA QUERIES */
 

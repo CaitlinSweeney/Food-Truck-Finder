@@ -34,7 +34,7 @@ function Dashboard(truckFactory) {
       }
       checkGeo();
 
-          // Try HTML5 geolocation.
+          // LOAD GEOLOCATION
          window.onload = function(){
              if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function(position) {
@@ -43,7 +43,7 @@ function Dashboard(truckFactory) {
                 lng: position.coords.longitude
               };
               myTruck.infoWindow.setPosition(pos);
-              myTruck.infoWindow.setContent("MY SPOT!");
+              myTruck.infoWindow.setContent(pos[0], pos[1]);
               myTruck.map.setCenter(pos);
               console.log(pos);
               myTruck.loc.push(pos)
@@ -55,8 +55,8 @@ function Dashboard(truckFactory) {
             handleLocationError(false, infoWindow, myTruck.map.getCenter());
           }
           function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-            infoWindow.setPosition(pos);
-            infoWindow.setContent(browserHasGeolocation ?
+            myTruck.infoWindow.setPosition(pos);
+            myTruck.infoWindow.setContent(browserHasGeolocation ?
               'Error: The Geolocation service failed.' :
               'Error: Your browser doesn\'t support geolocation.');
             }

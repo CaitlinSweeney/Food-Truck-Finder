@@ -1,8 +1,9 @@
 var Auth = require('./auth')
+var Trucks = require('./trucks')
 
 module.exports = (app) => {
     app.get('/', (req,res) => {
-        // res.redirect('/login'); // I don't have a landing page, so just redirect to the login page!
+        // res.redirect('/login')
         res.render('index.html')
     });
 
@@ -17,4 +18,5 @@ module.exports = (app) => {
       console.log(req.session);
         res.render('dashboard.html', req.session);
     })
+    app.post('/updateUser', Trucks.upsert)
 }

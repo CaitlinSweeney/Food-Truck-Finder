@@ -11,6 +11,7 @@ function truckCtrl(truckFactory){
     truck.featuredTrucks = []
     truck.randomTruck = []
     truck.fTruck;
+    truck.loc = []
     truck.gallery = []
     truck.search = []
     truck.map = new google.maps.Map(document.getElementById('map'), {
@@ -18,20 +19,49 @@ function truckCtrl(truckFactory){
       center: new google.maps.LatLng(39.7392,-104.9903),
       mapTypeId: 'terrain',
     });
+    truck.infoWindow = new google.maps.InfoWindow({map: truck.map});
+    console.log('Ctrl : ', truck)
     truck.icon = 'https://maps.google.com/mapfiles/ms/icons/green-dot.png'
-
-    // truck.infoWindow = new google.maps.InfoWindow({
-    //   map: truck.map,
-    //   position: truck.marker.position,
-    // });
     console.log(truck.infoWindow);
 
-// GEOLOCATION if (navigator.geolocation) {
+// GEOLOCATION
 
-  console.log('Geolocation is supported!');
-}
-else {
-  console.log('Geolocation is not supported for this Browser/OS version yet.');
+function checkGeo(){
+    if (navigator.geolocation) {
+      console.log('Geolocation is supported!');
+    }
+    else {
+      console.log('Geolocation is not supported for this Browser/OS version yet.');
+    }
+  }
+  checkGeo();
+
+  // LOAD GEOLOCATION
+ window.onload = function(){
+     if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+      truck.infoWindow.setPosition(pos);
+      truck.infoWindow.setContent("MY SPOT!");
+      truck.map.setCenter(pos);
+      console.log(pos);
+      truck.loc.push(pos)
+    }, function() {
+      handleLocationError(true, infoWindow, truck.map.getCenter());
+    });
+  } else {
+    // Browser doesn't support Geolocation
+    handleLocationError(false, infoWindow, truck.map.getCenter());
+  }
+  function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+    truck.infoWindow.setPosition(pos);
+    truck.infoWindow.setContent(browserHasGeolocation ?
+      'Error: The Geolocation service failed.' :
+      'Error: Your browser doesn\'t support geolocation.');
+    }
 }
 
 // Interate over truck factory
@@ -52,6 +82,7 @@ else {
               //   map: truck.map,
               //   position: truck.marker.position,
               // });
+
             }
           }
         }
@@ -123,6 +154,5 @@ else {
 
   }; // controller
 
-  // truckCtrl.$inject = ['truckFactory']
 
 // END CONTROLLER
