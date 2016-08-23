@@ -2,27 +2,24 @@
 
 angular.module('foodTruckApp')
     .factory('truckFactory', truckData)
+
     truckData.$inject = ['$http']
 
     console.log("Colorado Food Trucks Loaded");
 
     function truckData($http){
 
-      $http.post('/updateUser')
+      $http.post('/trucks')
 
       function getUser(){
-        return $http.get('/api/trucks')
+        return $http.get('/trucks')
       }
-      function createUser(){
-        return $http.post('/api/trucks', truckData)
+      function createUser(truckData){
+        return $http.post('/trucks', truckData)
       }
       return{
         getUser : getUser,
         createUser : createUser,
-      }
-
-      var factTruck = {
         loggedinTruck : {}
       }
-      return factTruck
   };

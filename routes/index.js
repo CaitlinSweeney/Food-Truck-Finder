@@ -18,5 +18,10 @@ module.exports = (app) => {
       console.log(req.session);
         res.render('dashboard.html', req.session);
     })
-    app.post('/updateUser', Trucks.upsert)
+
+    // User Information Routes
+    app.get('/trucks/', Trucks.get); // find one user
+    app.get('/trucks/:id', Trucks.get); // find one user
+    app.post('/trucks', Trucks.upsert); // Update
+    app.post('/trucks:id', Trucks.upsert); // Update
 }
