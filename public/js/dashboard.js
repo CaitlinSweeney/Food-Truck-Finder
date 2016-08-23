@@ -9,7 +9,7 @@ function Dashboard(truckFactory) {
     myTruck.featuredTrucks = []
     myTruck.randomTruck = []
     myTruck.fTruck;
-    myTruck.gallery = []
+    myTruck.loc = []
     myTruck.search = []
     myTruck.map = new google.maps.Map(document.getElementById('map'), {
       zoom: 9,
@@ -18,7 +18,7 @@ function Dashboard(truckFactory) {
     });
     myTruck.icon = 'https://maps.google.com/mapfiles/ms/icons/green-dot.png'
     myTruck.infoWindow = new google.maps.InfoWindow({map: myTruck.map});
-
+    console.log('Ctrl : ', myTruck)
     console.info('Dashboard.initialized')
     console.log(truckFactory)
 
@@ -42,10 +42,11 @@ function Dashboard(truckFactory) {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
               };
-
               myTruck.infoWindow.setPosition(pos);
-              myTruck.infoWindow.setContent(pos);
+              myTruck.infoWindow.setContent("MY SPOT!");
               myTruck.map.setCenter(pos);
+              console.log(pos);
+              myTruck.loc.push(pos)
             }, function() {
               handleLocationError(true, infoWindow, myTruck.map.getCenter());
             });
@@ -60,8 +61,6 @@ function Dashboard(truckFactory) {
               'Error: Your browser doesn\'t support geolocation.');
             }
         }
-
-
 } // end dashboard controller
 
 // navigator.geolocation.getCurrentPosition(successCallback, errorCallback,  {timeout: 10000});
