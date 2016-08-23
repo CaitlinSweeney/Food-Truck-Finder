@@ -1,19 +1,9 @@
-// Start FOOD TRUCK CONTROLLER
+// START FOOD TRUCK CONTROLLER
 
 angular.module('foodTruckApp')
 .controller('truckCtrl', truckCtrl);
 
 truckCtrl.$inject = ['truckFactory']
-// $routeProvider.when('/login', {
-//   templateUrl: '/views/auth.html'
-// });
-// $routeProvider.when('/register', {
-//   templateUrl: '/views/dashboard.html'
-// });
-// $routeProvider.when('/', {
-//   templateUrl: '/views/dashboard.html'
-// });
-
 
 function truckCtrl(truckFactory){
     var truck = this;
@@ -36,9 +26,13 @@ function truckCtrl(truckFactory){
     // });
     console.log(truck.infoWindow);
 
-// ROUTING
+// GEOLOCATION if (navigator.geolocation) {
 
-
+  console.log('Geolocation is supported!');
+}
+else {
+  console.log('Geolocation is not supported for this Browser/OS version yet.');
+}
 
 // Interate over truck factory
 

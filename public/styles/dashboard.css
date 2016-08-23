@@ -16,3 +16,7 @@ body {
 .dashboard h1{
   font-family: 'Nexa-Bold', sans-serif;
 }
+
+.user-profile{
+  color: #000;
+}

@@ -22,12 +22,34 @@
           <p>Let's put <%= user.truckName %> on the map.</p>
         </div>
           <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-8">
           <!-- MAP -->
           <div id="map"></div>
           </div>
-          <div class="col-md-6">
-            
+          <div class="col-md-4">
+          <div class="row">
+            <ul class="list-group user-profile">
+            <li class="list-group-item"><%= user.fullName %></li>
+            <li class="list-group-item"><%= user.truckName %></li>
+            <li class="list-group-item"><%= user.phone %></li>
+            <fieldset class="form-group">
+                <label class="sr-only" for="hours">Hours</label>
+                <div class="input-group">
+                    <div class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                    <input required placeholder="Hours" class="form-control" type="text" ng-model="auth.payload.hours"/>
+                </div>
+            </fieldset>
+            <fieldset class="form-group">
+                <label class="sr-only" for="website">Website</label>
+                <div class="input-group">
+                    <div class="input-group-addon"><i class="fa fa-desktop" aria-hidden="true"></i></div>
+                    <input required placeholder="Website" class="form-control" type="text" ng-model="auth.payload.website"/>
+                </div>
+            </fieldset>
+            <li class="list-group-item"><%= user.email%><li>
+              <!-- <input class="btn btn-primary" type="submit"/>
+              <p ng-class="auth.register.alert">{{ auth.register.message }}</p> -->
+          </ul>
           </div>
           </div> <!-- row -->
 
