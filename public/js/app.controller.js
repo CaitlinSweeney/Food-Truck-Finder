@@ -14,15 +14,17 @@ function truckCtrl(truckFactory){
     truck.loc = []
     truck.gallery = []
     truck.search = []
+    truck.icon = '/styles/imgs/co-mini-truck.png'
     truck.map = new google.maps.Map(document.getElementById('map'), {
       zoom: 9,
       center: new google.maps.LatLng(39.7392,-104.9903),
       mapTypeId: 'terrain',
     });
-    truck.infoWindow = new google.maps.InfoWindow({map: truck.map});
+    truck.marker = new google.maps.Marker({
+      icon: truck.icon,
+      map: truck.map
+    });
     console.log('Ctrl : ', truck)
-    truck.icon = 'https://maps.google.com/mapfiles/ms/icons/green-dot.png'
-    console.log(truck.infoWindow);
 
 // GEOLOCATION
 
@@ -44,21 +46,22 @@ function checkGeo(){
         lat: position.coords.latitude,
         lng: position.coords.longitude
       };
-      truck.infoWindow.setPosition(pos);
-      truck.infoWindow.setContent("MY SPOT!");
+      // truck.infoWindow.setPosition(pos);
+      // truck.infoWindow.setContent("MY SPOT!");
+      truck.marker.setPosition(pos);
       truck.map.setCenter(pos);
       console.log(pos);
       truck.loc.push(pos)
     }, function() {
-      handleLocationError(true, infoWindow, truck.map.getCenter());
+      handleLocationError(true, marker, truck.map.getCenter());
     });
   } else {
     // Browser doesn't support Geolocation
-    handleLocationError(false, infoWindow, truck.map.getCenter());
+    handleLocationError(false, marker, truck.map.getCenter());
   }
-  function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-    truck.infoWindow.setPosition(pos);
-    truck.infoWindow.setContent(browserHasGeolocation ?
+  function handleLocationError(browserHasGeolocation, marker, pos) {
+    truck.marker.setPosition(pos);
+    truck.marker.setContent(browserHasGeolocation ?
       'Error: The Geolocation service failed.' :
       'Error: Your browser doesn\'t support geolocation.');
     }

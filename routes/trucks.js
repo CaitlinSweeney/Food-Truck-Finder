@@ -5,11 +5,7 @@ var User = require('../models/user');
 module.exports = {
   get : (req, res) => {
     // READ
-    // truck.find({})
-    // .populate('')
-    // .exec(function(err, trucks){
-    //   res.json(trucks);
-    // })
+    console.log()
   },
   upsert : (req, res) =>{
     // CREATE / UPDATE
@@ -24,12 +20,6 @@ module.exports = {
         req.session.user = user
         res.send(req.session.user)
       })
-      //   newUser.save(function(err, user){
-      //   if(err){
-      //     return res.json(err);
-      //   }
-      //   res.json(user);
-      // });
     }
   }
   // remove : (req, res) => {

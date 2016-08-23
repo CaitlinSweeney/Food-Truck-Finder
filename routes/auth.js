@@ -20,6 +20,7 @@ module.exports = {
         res.redirect('/login');
     },
     login: (req, res) => { // form post submission
+      console.log(req.body)
         User.findOne({
             email: req.body.email
         }, (err, user) => {

@@ -15,11 +15,11 @@ function Dashboard(truckFactory) {
       center: new google.maps.LatLng(39.7392,-104.9903),
       mapTypeId: 'terrain',
     });
-    myTruck.icon = 'https://maps.google.com/mapfiles/ms/icons/green-dot.png'
+    myTruck.icon = '/styles/imgs/co-mini-truck.png'
     myTruck.infoWindow = new google.maps.InfoWindow({map: myTruck.map});
     console.log('Ctrl : ', myTruck)
     console.info('Dashboard.initialized')
-    console.log(truckFactory)
+    console.log(myTruck.icon)
 
     // GEOLOCATION
 
