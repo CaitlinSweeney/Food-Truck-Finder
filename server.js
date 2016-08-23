@@ -4,18 +4,40 @@ var express = require('express'),
     logger = require('morgan'),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
-    // Routes = require('./routes'),
+    Routes = require('./routes'),
     path = require('path'),
     ejs = require('ejs'),
-    // sessions = require('client-session'),
+    sessions = require('client-sessions'),
     port = process.env.PORT || 1300,
     app = express();
 
+app.use(logger('dev'));
+app.use(sessions({
+  cookieName: '_mean-auth', // front-end cookie name
+  secret: 'T&U@K$', // the encryption password : keep this safe
+  requestKey: 'session', // req.session,
+  duration: 86400, // 60 * 60 * 24 (number of seconds in a day), tells the middleware when the cookie/session should expire,
+  cookie: {
+      ephemeral: false,   // when true, cookie expires when browser is closed
+      httpOnly: true,     // when true, the cookie is not accesbile via front-end JavaScript
+      secure: false       // when true, cookie will only be read when sent over HTTPS
+    }
+}));
+
 app.use(express.static(path.join(__dirname,'public')));
-
 app.post('*', bodyParser.json(), bodyParser.urlencoded({ extended: true }));
+app.set('view engine','html'); // allows us to specify the default extension for the files in the views folder
+app.engine('html', ejs.renderFile); // this is the function that binds to res.render
 
-// Routes(app);
+mongoose.connect('mongodb://localhost/foodTrucks', (mongooseErr) => {
+    if( mongooseErr ) {
+        console.error('#ERROR#'.red,'Could not initilize mongoose!', mongooseErr);
+    } else {
+        console.info('Mongoose initilized!'.green.bold);
+    }
+});
+
+Routes(app);
 
 app.listen(port, (error)=>{
     if(error) {

@@ -4,6 +4,16 @@ angular.module('foodTruckApp')
 .controller('truckCtrl', truckCtrl);
 
 truckCtrl.$inject = ['truckFactory']
+// $routeProvider.when('/login', {
+//   templateUrl: '/views/auth.html'
+// });
+// $routeProvider.when('/register', {
+//   templateUrl: '/views/dashboard.html'
+// });
+// $routeProvider.when('/', {
+//   templateUrl: '/views/dashboard.html'
+// });
+
 
 function truckCtrl(truckFactory){
     var truck = this;
@@ -13,8 +23,6 @@ function truckCtrl(truckFactory){
     truck.fTruck;
     truck.gallery = []
     truck.search = []
-    // map variables
-    // truck.myLatLng;
     truck.map = new google.maps.Map(document.getElementById('map'), {
       zoom: 9,
       center: new google.maps.LatLng(39.7392,-104.9903),
@@ -26,9 +34,11 @@ function truckCtrl(truckFactory){
     //   map: truck.map,
     //   position: truck.marker.position,
     // });
+    console.log(truck.infoWindow);
 
-// google maps gelocation
-  console.log(truck.infoWindow);
+// ROUTING
+
+
 
 // Interate over truck factory
 
@@ -60,7 +70,6 @@ function truckCtrl(truckFactory){
         truck.allMarkers[i].setMap(null);
       }
   }
-
         // $('[title]').tooltip()
 
     // truck.showPopover = function(event, loc){
