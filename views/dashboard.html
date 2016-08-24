@@ -21,6 +21,7 @@
           <h1>Welcome, <%= user.fullName %>!</h1>
           <p>Let's put <%= user.truckName %> on the map.</p>
         </div>
+        <div class="container-fluid">
           <div class="row">
           <div class="col-md-8">
           <!-- MAP -->
@@ -28,30 +29,29 @@
           </div>
           <div class="col-md-4">
           <div class="row">
-            <div class="container">
             	<table>
                <form ng-submit="dash.addType(dash.user.types)">
             		<thead>
             			<tr>
-            				<th><i class="fa fa-cutlery" aria-hidden="true"></i></th>
+            				<th><i class="fa fa-user" aria-hidden="true"></i></th>
             				<th class="list-group-item"><%= user.fullName %></th>
             			</tr>
             		</thead>
             		<tbody>
             			<tr>
-            				<td><i class="fa fa-cutlery" aria-hidden="true"></i></td>
+            				<td><i class="fa fa-truck" aria-hidden="true"></i></td>
             				<td class="list-group-item"><%= user.truckName %></td>
             			<tr>
-            				<td><i class="fa fa-cutlery" aria-hidden="true"></i></td>
+            				<td><i class="fa fa-phone" aria-hidden="true"></i></td>
             				<td class="list-group-item"><%= user.phone %></td>
             			</tr>
                   <tr>
-                    <td><i class="fa fa-cutlery" aria-hidden="true"></i></td>
+                    <td><i class="fa fa-envelope" aria-hidden="true"></i></td>
                     <td class="list-group-item"><%= user.email %></td>
                   </tr>
             			<tr>
             				<td><i class="fa fa-cutlery" aria-hidden="true"></i></td>
-            				<td><label class="checkbox-inline" ng-repeat="(key, value) in dash.type">
+            				<td><h4>Check all that apply!</h4><label class="checkbox-inline" ng-repeat="(key, value) in dash.type">
                       <input type="checkbox" ng-model="dash.user.types[key]">{{ key }}</label></td>
             			</tr>
             		</tbody>
@@ -63,6 +63,7 @@
           <a href="/logout" class="btn btn-lg">Logout</a>
           </div>
         </div>
+      </div> <!-- container -->
 
         <!-- jQuery -->
         <script src="js/jquery.js"></script>

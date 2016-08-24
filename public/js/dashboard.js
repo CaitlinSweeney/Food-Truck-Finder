@@ -12,9 +12,12 @@ function Dashboard(truckFactory) {
     });
     myTruck.icon = '/styles/imgs/co-mini-truck.png'
     myTruck.infoWindow = new google.maps.InfoWindow({map: myTruck.map});
+    myTruck.marker = new google.maps.Marker({
+      icon: myTruck.icon,
+      map: myTruck.map
+    });
     console.log('Ctrl : ', myTruck)
     console.info('Dashboard.initialized')
-    console.log(myTruck.icon)
 
     // GEOLOCATION
 
@@ -36,8 +39,9 @@ function Dashboard(truckFactory) {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
               };
+              myTruck.marker.setPosition(pos);
               myTruck.infoWindow.setPosition(pos);
-              myTruck.infoWindow.setContent(pos[0], pos[1]);
+              myTruck.infoWindow.setContent("I'm Here!");
               myTruck.map.setCenter(pos);
               console.log(pos);
               myTruck.location = [pos.lng, pos.lat]
@@ -45,11 +49,11 @@ function Dashboard(truckFactory) {
               truckFactory.createUser({location: myTruck.location});
 
             }, function() {
-              handleLocationError(true, infoWindow, myTruck.map.getCenter());
+              handleLocationError(true, marker, myTruck.map.getCenter());
             });
           } else {
             // Browser doesn't support Geolocation
-            handleLocationError(false, infoWindow, myTruck.map.getCenter());
+            handleLocationError(false, marker, myTruck.map.getCenter());
           }
           function handleLocationError(browserHasGeolocation, infoWindow, pos) {
             myTruck.infoWindow.setPosition(pos);

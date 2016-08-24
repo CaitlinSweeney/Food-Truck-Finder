@@ -78,14 +78,9 @@ function checkGeo(){
                 position: new google.maps.LatLng(t.location[0], t.location[1]),
                 map: truck.map,
                 icon: truck.icon,
-              }); // put markers in array
+              });
+              // put markers in array
               truck.allMarkers.push(truck.marker);
-
-              // truck.infoWindow = new google.maps.InfoWindow({
-              //   map: truck.map,
-              //   position: truck.marker.position,
-              // });
-
             }
           }
         }

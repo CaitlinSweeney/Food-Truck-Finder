@@ -8,6 +8,12 @@ body {
     color: #000;
     font-family: 'Muli', sans-serif;
 }
+.container {
+  /*top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+}
+
 .dashboard{
   background-color: #fff;
   color: #000;
@@ -24,24 +30,20 @@ body {
   background-color: #bfbfbf;
 }
 
-.container {
-	/*top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);*/
-}
 
 table {
-	width: 300px;
+	width: 350px;
 	border-collapse: collapse;
 	overflow: hidden;
 	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  margin-left: 10px;
 }
 
 th,
 td {
 	padding: 15px;
 	background-color: rgba(255,255,255,0.2);
-	color: #000;
+	color: #fff;
 }
 
 th {
@@ -75,4 +77,11 @@ tbody {
 			}
 		}
 	}
+}
+
+.list-group-item{
+  background-color: rgba(255,255,255,0.2);
+}
+.checkbox-inline{
+  margin-left: 10px;
 }
