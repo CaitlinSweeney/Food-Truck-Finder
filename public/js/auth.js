@@ -14,7 +14,7 @@
 
         auth.login = {
             submit: function($event) { // click-event
-                console.info('auth.login.submit', $event);
+                console.info('auth.login.submit');
 
                 $http.post('/login', $event)
                     .then(auth.login.success, auth.login.error);

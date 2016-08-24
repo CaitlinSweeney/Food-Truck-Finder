@@ -8,14 +8,13 @@ angular.module('foodTruckApp')
     console.log("Colorado Food Trucks Loaded");
 
     function truckData($http){
-
-      $http.post('/trucks')
-
+      $http.post('/users')
       function getUser(){
-        return $http.get('/trucks')
+        return $http.get('/users')
       }
       function createUser(truckData){
-        return $http.post('/trucks', truckData)
+        console.log("truckData", truckData)
+        return $http.post('/users', truckData)
       }
       return{
         getUser : getUser,

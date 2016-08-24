@@ -5,11 +5,6 @@ Dashboard.$inject = ['truckFactory']
 
 function Dashboard(truckFactory) {
     var myTruck = this;
-    myTruck.allMarkers = []
-    myTruck.featuredTrucks = []
-    myTruck.randomTruck = []
-    myTruck.fTruck;
-    myTruck.search = []
     myTruck.map = new google.maps.Map(document.getElementById('map'), {
       zoom: 9,
       center: new google.maps.LatLng(39.7392,-104.9903),
@@ -48,9 +43,6 @@ function Dashboard(truckFactory) {
               myTruck.location = [pos.lng, pos.lat]
               console.log(myTruck.location);
               truckFactory.createUser({location: myTruck.location});
-              // .then(function(response){
-              //   myTruck.newLoc = response.data;
-              //   console.log(response);
 
             }, function() {
               handleLocationError(true, infoWindow, myTruck.map.getCenter());
@@ -65,8 +57,37 @@ function Dashboard(truckFactory) {
               'Error: The Geolocation service failed.' :
               'Error: Your browser doesn\'t support geolocation.');
             }
+        } // end geolocation
+
+          // ADD FOOD TYPES TO DATABASE
+          myTruck.type = {
+            pizza: true,
+            mexican: true,
+            vegetarian: true,
+            glutenFree: true,
+            pizza: true,
+            bbq: true,
+            sandwiches: true,
+            medittereanan: true,
+            carribean: true,
+            european: true,
+            seafood: true,
+            asian: true,
+            latinAmerican: true,
+            brewery: true,
+            healthy: true,
+            breakfast: true,
+            lunch: true,
+            dinner: true,
+          }
+        myTruck.addType = function(types){
+          console.log(types)
+          truckFactory.createUser({types: myTruck.user.types }).then(function(res) {
+            console.log('hi: ', res)
+          })
         }
 
+ console.log("hey", myTruck)
 
 } // end dashboard controller
 

@@ -16,7 +16,7 @@
         <script src="/js/auth.js"></script>
     </head>
 
-    <body ng-controller="DashboardController as dashboard" class="container">
+    <body ng-controller="DashboardController as dash" class="container">
         <div class="jumbotron dashboard">
           <h1>Welcome, <%= user.fullName %>!</h1>
           <p>Let's put <%= user.truckName %> on the map.</p>
@@ -28,31 +28,36 @@
           </div>
           <div class="col-md-4">
           <div class="row">
-            <ul class="list-group user-profile">
-            <li class="list-group-item"><%= user.fullName %></li>
-            <li class="list-group-item"><%= user.truckName %></li>
-            <li class="list-group-item"><%= user.phone %></li>
-            <fieldset class="form-group">
-                <label class="sr-only" for="hours">Hours</label>
-                <div class="input-group">
-                    <div class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
-                    <input required placeholder="Hours" class="form-control" type="text" ng-model="auth.payload.hours"/>
-                </div>
-            </fieldset>
-            <fieldset class="form-group">
-                <label class="sr-only" for="website">Website</label>
-                <div class="input-group">
-                    <div class="input-group-addon"><i class="fa fa-desktop" aria-hidden="true"></i></div>
-                    <input required placeholder="Website" class="form-control" type="text" ng-model="auth.payload.website"/>
-                </div>
-            </fieldset>
-            <li class="list-group-item"><%= user.email%><li>
-              <!-- <input class="btn btn-primary" type="submit"/>
-              <p ng-class="">{{ }}</p> -->
-          </ul>
-          </div>
-          </div> <!-- row -->
-
+            <div class="container">
+            	<table>
+               <form ng-submit="dash.addType(dash.user.types)">
+            		<thead>
+            			<tr>
+            				<th><i class="fa fa-cutlery" aria-hidden="true"></i></th>
+            				<th class="list-group-item"><%= user.fullName %></th>
+            			</tr>
+            		</thead>
+            		<tbody>
+            			<tr>
+            				<td><i class="fa fa-cutlery" aria-hidden="true"></i></td>
+            				<td class="list-group-item"><%= user.truckName %></td>
+            			<tr>
+            				<td><i class="fa fa-cutlery" aria-hidden="true"></i></td>
+            				<td class="list-group-item"><%= user.phone %></td>
+            			</tr>
+                  <tr>
+                    <td><i class="fa fa-cutlery" aria-hidden="true"></i></td>
+                    <td class="list-group-item"><%= user.email %></td>
+                  </tr>
+            			<tr>
+            				<td><i class="fa fa-cutlery" aria-hidden="true"></i></td>
+            				<td><label class="checkbox-inline" ng-repeat="(key, value) in dash.type">
+                      <input type="checkbox" ng-model="dash.user.types[key]">{{ key }}</label></td>
+            			</tr>
+            		</tbody>
+            	</table>
+              <input class="btn btn-primary user-prof-btn" type="submit"/>
+            </div>
         <div class="row">
           <div class="col-lg-12">
           <a href="/logout" class="btn btn-lg">Logout</a>

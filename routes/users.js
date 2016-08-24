@@ -9,14 +9,16 @@ module.exports = {
   },
   upsert : (req, res) =>{
     // CREATE / UPDATE
-    console.log(req.session.user)
+    console.log("req.session.user", req.session.user)
     for (var newProp in req.body){
       req.session.user[newProp]= req.body[newProp];
     }
+    console.log("req.session.user", req.session.user)
     User.findOneAndUpdate({_id : req.session.user._id},
-      req.body,
+      req.session.user,
       {new : true},
       function(err, user){
+        console.log("req.body", req.body)
         req.session.user = user
         res.send(req.session.user)
       })

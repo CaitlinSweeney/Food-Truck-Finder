@@ -1,5 +1,5 @@
 var Auth = require('./auth')
-var Trucks = require('./trucks')
+var Trucks = require('./users')
 
 module.exports = (app) => {
     app.get('/', (req,res) => {
@@ -20,8 +20,8 @@ module.exports = (app) => {
     })
 
     // User Information Routes
-    app.get('/trucks/', Trucks.get); // find one user
-    app.get('/trucks/:id', Trucks.get); // find one user
-    app.post('/trucks', Trucks.upsert); // update
-    app.post('/trucks:id', Trucks.upsert); // Update
+    app.get('/users/', Trucks.get); // find one user
+    app.get('/users/:id', Trucks.get); // find one user
+    app.post('/users', Trucks.upsert); // update
+    app.post('/users:id', Trucks.upsert); // Update
 }
