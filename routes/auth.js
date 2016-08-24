@@ -48,6 +48,14 @@ module.exports = {
                     } else {
                         req.session.user = user;
                         delete user.password; // just for securty, delete the password before sending it to the front-end;
+                        User.update({_id:user._id}, {$set: {loggedIn: true}}, (err, res) =>{
+                          if(err){
+                            console.log("at loggedIn", err)
+                          }else{
+                            console.log('loggedIn success')
+                          }
+                        }
+                      );
                         res.json(user);
                     }
                 });
@@ -66,6 +74,14 @@ module.exports = {
             } else {
                 console.log('New user created in MongoDB:', user);
                 req.session.user = user;
+                User.update({_id:user._id}, {$set: {loggedIn: true}}, (err, res) =>{
+                  if(err){
+                    console.log("register loggedIn", err)
+                  }else{
+                    console.log('register loggedIn, success')
+                  }
+                }
+              );
                 res.send(user);
             }
         });

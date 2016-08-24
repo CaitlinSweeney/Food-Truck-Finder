@@ -8,7 +8,6 @@ angular.module('foodTruckApp')
     console.log("Colorado Food Trucks Loaded");
 
     function truckData($http){
-      $http.post('/users')
       function getUser(){
         return $http.get('/users')
       }

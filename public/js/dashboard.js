@@ -44,7 +44,7 @@ function Dashboard(truckFactory) {
               myTruck.infoWindow.setContent("I'm Here!");
               myTruck.map.setCenter(pos);
               console.log(pos);
-              myTruck.location = [pos.lng, pos.lat]
+              myTruck.location = [pos.lat, pos.lng]
               console.log(myTruck.location);
               truckFactory.createUser({location: myTruck.location});
 
