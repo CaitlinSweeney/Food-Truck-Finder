@@ -27,15 +27,7 @@
 					<li class="sidebar-brand">
 							<h1>Here are your revved up trucks!</h1>
 					</li>
-					<li>
-							<a href="#">Dashboard</a>
-					</li>
-					<li>
-							<a href="#">Shortcuts</a>
-					</li>
-					<li>
-							<a href="#">Overview</a>
-					</li>
+					<li ng-repeat= "tr in truck.truckList track by $index">{{ tr }}</li>
 			</ul>
 	</div>
 	<!-- /#sidebar-wrapper -->
@@ -132,7 +124,6 @@
 
             </div>
 
-
         </div><!-- button and search -->
 
 				<div class="col-md-8 mapheader">
@@ -159,7 +150,7 @@
 
 						<div class="col-sm-3 col-xs-6" ng-repeat= "image in truck.gallery track by $index">
                 <a href="#">
-                    <img class="img-responsive portfolio-item" src="{{ image }}" alt="">
+                    <!-- <img class="img-responsive portfolio-item" src="{{ image }}" alt=""> -->
                 </a>
             </div>
 

@@ -6,6 +6,7 @@ module.exports = {
   get : (req, res) => {
     // READ
     console.log("getting user")
+    // User.query(req.query),
     User.find({loggedIn: true},
       function(err, user){
         if(err){
@@ -13,13 +14,8 @@ module.exports = {
         }else{
           res.json(user)
         }
+        console.log("got user")
     });
-    // if({_id : {loggedIn: true}}){
-    //   User.find({_id: {location: []} }, function(err, user){
-    //     res.json(user);
-    //   })
-    // }
-    // .populate('')
   },
   upsert : (req, res) => {
     // CREATE / UPDATE

@@ -5,13 +5,13 @@ angular.module('foodTruckApp')
 
 truckCtrl.$inject = ['truckFactory']
 
-function truckCtrl(truckFactory){
+function truckCtrl(truckFactory, $http){
     var truck = this;
-    // truck.allMarkers = []
     // truck.featuredTrucks = []
     // truck.randomTruck = []
     // truck.fTruck;
     // truck.gallery = []
+    truck.currentTrucks = {}
     truck.loc = []
     truck.search = []
     truck.icon = '/styles/imgs/co-mini-truck.png'
@@ -51,7 +51,8 @@ function checkGeo(){
       truck.marker.setPosition(pos);
       truck.map.setCenter(pos);
       console.log(pos);
-      truck.loc.push(pos)
+      truck.loc.push(pos);
+      console.log(truck.loc);
     }, function() {
       handleLocationError(true, marker, truck.map.getCenter());
     });
@@ -67,14 +68,18 @@ function checkGeo(){
     }
 } // end geolocation
 
+// get logged in users
 
+      truck.createTruckList = function(){
+        truckFactory.getUser().then(function(res){
+          console.log("logged in res", res)
+           truck.truckList = res.data;
+           console.log("logged in truckers", truck.truckList)
+         });
+       }
+       truck.createTruckList();
 
-
-
-
-
-
-
+}; // controller
 
 
 
@@ -163,7 +168,7 @@ function checkGeo(){
 //
 //     truck.typeSearch()
 
-}; // controller
+
 
 
 // END CONTROLLER

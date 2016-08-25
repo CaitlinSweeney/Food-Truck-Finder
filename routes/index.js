@@ -1,5 +1,6 @@
 var Auth = require('./auth')
 var Users = require('./users')
+var Request = require("request");
 
 module.exports = (app) => {
     app.get('/', (req,res) => {
