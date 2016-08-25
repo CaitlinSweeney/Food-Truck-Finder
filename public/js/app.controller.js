@@ -7,10 +7,8 @@ truckCtrl.$inject = ['truckFactory']
 
 function truckCtrl(truckFactory, $http){
     var truck = this;
-    // truck.featuredTrucks = []
-    // truck.randomTruck = []
-    // truck.fTruck;
-    // truck.gallery = []
+    truck.avTypesList = []
+    ruck.avLocList = []
     truck.currentTrucks = {}
     truck.loc = []
     truck.search = []
@@ -50,9 +48,7 @@ function checkGeo(){
       // truck.infoWindow.setContent("MY SPOT!");
       truck.marker.setPosition(pos);
       truck.map.setCenter(pos);
-      console.log(pos);
       truck.loc.push(pos);
-      console.log(truck.loc);
     }, function() {
       handleLocationError(true, marker, truck.map.getCenter());
     });
@@ -72,45 +68,83 @@ function checkGeo(){
 
       truck.createTruckList = function(){
         truckFactory.getUser().then(function(res){
-          console.log("logged in res", res)
            truck.truckList = res.data;
            console.log("logged in truckers", truck.truckList)
          });
        }
        truck.createTruckList();
 
+// Iterate over trucks in an object within active trucks array object
+
+      truck.allMarkers = [];
+
+       truck.avLocs = function() {
+         truck.availableTrucks = truck.truckList.map(function(truckObj, key){
+            console.log('this is first forEach')
+            return {
+          location: truckObj.location,
+          types : truckObj.types
+        }
+        });
+       }; // end inputQuery function
+
+       truck.avTypes = function() {
+         truck.avTypesList = truck.truckList.map(function(truckObj, key){
+            console.log('this is first forEach')
+            return {
+          location: truckObj.location,
+          types : truckObj.types
+        }
+        });
+       }; // end inputQuery function
+
+          //    var exists = false;
+          //   angular.forEach(truck.availabletrucks, function(availableTypes, index){
+          //     if (availableType == type){
+          //       exists = true;
+          //     }
+          //   });
+          // if (exists === false){
+          //   truck.availableTrucks.push(type)
+          // }
+        // }); // second .forEach
+
+      truck.setFilter = function(type){
+        truck.typeFilter = type;
+      };
+      //
+      // truck.setFilter();
+      // console.log('available trucks', truck.availableTrucks)
+
+
+      //    for(var i=0; i<truck.truckList.length; i++){
+      //      for (var ii=0; ii<truck.truckList[i].types.length; ii++){
+      //        if (truck.truckList[i].types[ii] === argument) {
+      //          var t = truck.truckList[i]
+      //          truck.marker = new google.maps.Marker({
+      //            position: new google.maps.LatLng(t.location[0], t.location[1]),
+      //            map: truck.map,
+      //            icon: truck.icon,
+      //          });
+      //          // put markers in array
+      //          console.log(truck.marker);
+      //          truck.allMarkers.push(truck.marker);
+      //        }
+      //      }
+      //    }
+      //    console.log(t.location);
+      //    console.log(truck.allMarkers);
+      //  };
+      //  truck.clearMarkers = function(){
+      //    for(i=0; i < truck.allMarkers.length; i++){
+      //      truck.allMarkers[i].setMap(null);
+      //    }
+      //  }
+
 }; // controller
 
 
 
-
-
-// Iterate over trucks in an object within factory
-
-//     truck.inputQuery = function(argument) {
-//         for(var i=0; i<truckFactory.trucks.length; i++){
-//           for (var ii=0; ii<truckFactory.trucks[i].type.length; ii++){
-//             if (truckFactory.trucks[i].type[ii] === argument) {
-//               var t = truckFactory.trucks[i]
-//               truck.marker = new google.maps.Marker({
-//                 position: new google.maps.LatLng(t.location[0], t.location[1]),
-//                 map: truck.map,
-//                 icon: truck.icon,
-//               });
-//               // put markers in array
-//               truck.allMarkers.push(truck.marker);
-//             }
-//           }
-//         }
-//         console.log(truck.allMarkers);
-//         console.log(truck.truckSearch);
-//         console.log(t.location);
-//   };
-//     truck.clearMarkers = function(){
-//       for(i=0; i < truck.allMarkers.length; i++){
-//         truck.allMarkers[i].setMap(null);
-//       }
-//   }
 //         // $('[title]').tooltip()
 //
 //     // truck.showPopover = function(event, loc){

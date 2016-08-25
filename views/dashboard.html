@@ -25,10 +25,10 @@
           <div class="row">
           <div class="col-md-8">
           <!-- MAP -->
-          <div id="map"></div>
+          <div class="img-responsive" id="map"></div>
           </div>
           <div class="col-md-4">
-          <div class="row">
+
             	<table>
                <form ng-submit="dash.addType(dash.user.types)">
             		<thead>
@@ -56,14 +56,16 @@
             			</tr>
             		</tbody>
             	</table>
-              <input class="btn btn-primary user-prof-btn" type="submit"/>
+              <input class="btn btn-lg user-prof-btn" type="submit"/>
             </div>
-        <div class="row">
-          <div class="col-lg-12">
-          <a href="/logout" class="btn btn-lg user-logout">Logout</a>
-          </div>
-        </div>
       </div> <!-- container -->
+      <div class="row">
+        <div class="col-lg-12">
+          <h4> Done for the day? </h4>
+          <a href="/logout" class="btn btn-primary" style="background-color: #fded18;
+          border-color: #fded18; color: #2a2c6b;">Logout</a>
+        </div>
+      </div>
 
         <!-- jQuery -->
         <script src="js/jquery.js"></script>

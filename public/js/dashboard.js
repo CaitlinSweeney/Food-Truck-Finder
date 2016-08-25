@@ -41,7 +41,7 @@ function Dashboard(truckFactory) {
               };
               myTruck.marker.setPosition(pos);
               myTruck.infoWindow.setPosition(pos);
-              myTruck.infoWindow.setContent("I'm Here!");
+              myTruck.infoWindow.setContent("You're Here!");
               myTruck.map.setCenter(pos);
               console.log(pos);
               myTruck.location = [pos.lat, pos.lng]
