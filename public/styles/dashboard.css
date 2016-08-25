@@ -29,7 +29,24 @@ body {
   padding: 5px;
   background-color: #bfbfbf;
 }
+.user-prof-btn, .user-prof-btn:hover{
+  width: 90%;
+  margin: 15px;
+  background-color: #ec008b;
+  border-color: #ec008B;
+}
+.user-prof-btn:hover{
+  width: 90%;
+  margin: 15px;
+  background-color: #f7a4d9;
+  border-color: #f7a4d9;
+}
 
+}
+.btn-lg.user-logout{
+  background-color: #fded18;
+  border-color: #fded18;
+}
 
 table {
 	width: 350px;

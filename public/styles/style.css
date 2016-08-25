@@ -80,7 +80,7 @@ body {
     position: absolute;
     top: 0;
     width: 250px;
-    margin: 0;
+    margin: 15px;
     padding: 0;
     list-style: none;
 }
@@ -170,6 +170,11 @@ body {
 }
 .navbar .navbar-collapse a:hover{
   color: #000
+}
+
+#menu-toggle{
+  margin-left: 15px;
+  width: 85%;
 }
 
 /* CONTENT */
