@@ -363,6 +363,36 @@ footer {
   color: #fff;
 }
 
+.footer-imgs img{
+  display: inline;
+  width: 28%;
+
+}
+
+img.foot1{
+  width: 28%;
+  position: absolute;
+}
+img.foot2{
+  width: 28%;
+  position: absolute;*/
+}
+img.foot{
+  width: 28%;
+  position: absolute;
+}
+img.foot1{
+  width: 28%;
+  position: absolute;
+}
+img.foot1{
+  width: 28%;
+  position: absolute;
+}
+
+
+
+
 
 /* MEDIA QUERIES */
 
