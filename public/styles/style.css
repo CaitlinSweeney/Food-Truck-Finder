@@ -79,15 +79,24 @@ body {
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 250px;
+    width: 200px;
     margin: 15px;
     padding: 0;
     list-style: none;
 }
+.tlist{
+  background-color: linear-gradient(45deg, #49a09d, #5f2c82);
+}
+.tname{
+  font-size: 18px;
+}
+.tphone{
+  border-bottom: solid #fff;
+}
 
 .sidebar-nav li {
     text-indent: 20px;
-    line-height: 40px;
+    line-height: 12px;
 }
 
 .sidebar-nav li a {

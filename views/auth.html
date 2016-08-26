@@ -14,6 +14,13 @@
         <script src="/js/auth.js"></script>
     </head>
     <body ng-controller="app.auth.controller as auth">
+      <div class="container-fluid">
+        <div class="row">
+
+      <div class="col-md-6">
+        <div class="left-auth-col"></div>
+</div>      <!-- first col  -->
+      <div class="col-md-6">
         <section id="tabs">
             <!-- Nav tabs -->
             <ul class="nav nav-tabs" role="tablist">
@@ -64,7 +71,7 @@
                             <input required placeholder="Truck Name" class="form-control" type="text" ng-model="auth.payload.truckName"/>
                           </div>
                         </fieldset>
-                      
+
                         <fieldset class="form-group">
                             <label class="sr-only" for="phone">Phone Number</label>
                             <div class="input-group">
@@ -97,5 +104,8 @@
                 </div>
             </div>
         </section>
+        </div>
+      </div> <!-- row -->
+        </div> <!-- main container -->
     </body>
 </html>

@@ -21,7 +21,7 @@ module.exports = (app) => {
     })
 
     // User Information Routes
-    app.get('/users/', Users.get); // find one user
+    app.get('/users/', Users.getAll); // find one user
     app.get('/users/:id', Users.get); // find one user
     app.post('/users', Users.upsert); // update
     app.post('/users:id', Users.upsert); // Update

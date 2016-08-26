@@ -7,15 +7,28 @@ module.exports = {
     // READ
     console.log("getting user")
     // User.query(req.query),
-    User.find({loggedIn: true},
-      function(err, user){
+    User.findOne({
+      _id: req.session.user._id
+    }, (err, user) => {
         if(err){
           console.log(err);
-        }else{
-          res.json(user)
+          res.status(500).send({ message: 'Something is not right :('});
+        } else {
+          res.json(user);
         }
         console.log("got user")
     });
+  },
+  getAll: (req, res) => {
+    User.find({}, (err, users) => {
+        if(err){
+          console.log(err);
+          res.status(500).send({ message: 'Something is not right :('});
+        } else {
+          res.json(users);
+        }
+        console.log("got all da users")
+    })
   },
   upsert : (req, res) => {
     // CREATE / UPDATE
@@ -32,6 +45,14 @@ module.exports = {
         req.session.user = user
         res.send(req.session.user)
       })
+    // User.findOneAndRemove({_id : req.session.user._id},
+    //   req.session.user,
+    //   {new : false},
+    //     function(err, user){
+    //       console.log("req.body", req.body)
+    //       req.session.user = user
+    //       res.send(req.session.user)
+    //     })
     }
   }
   // remove : (req, res) => {

@@ -14,7 +14,6 @@ var mongoose = require('mongoose'),
         hours : String,
         website : String,
         image : String,
-        loggedIn: Boolean,
         created: {
             type: Number,
             default: () => Date.now()
