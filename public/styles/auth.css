@@ -23,7 +23,7 @@ form {
 }
 
 .tab-content {
-    border: 1px solid #ddd;
+    border: 0px solid #ddd;
     border-top: none;
 }
 
@@ -41,17 +41,22 @@ form {
     border-color: #ec008B;
 }
 
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+    background-color: rgba(255,255,255,0.7);
+}
+
 #login, #register{
-  background-color: #fff;
+  background-color: rgba(255,255,255,0.7);
 }
 
 /* Right Section */
 
 .right-auth-col{
  margin: 50px 50px auto;
- background-image: url('/styles/imgs/rear-truck1.jpg');
+ background-image: url('/styles/imgs/rear-truck2.jpg');
  background-repeat: no-repeat;
  background-size: cover;
+ height: 458px;
  box-shadow: 10px 10px 0px 0px rgba(255,255,255,1);
 
 }
@@ -73,7 +78,11 @@ form {
   margin: 0px 60px 0px 0px;
   width: 250px;
   font-family: 'Bodini-72';
+  font-size: 18px;
 }
 .definition h3{
   font-family: 'Bodini-72';
 }
+/*.definition p{
+  font-family: 'Bodini-72';
+}*/

@@ -155,7 +155,7 @@ h3{
 }
 
 .navbar-brand > img{
-  margin: 0px -100px;
+  margin: -138px -200px 10px;
   position: absolute;
   display: inline;
   transition: 1s;
@@ -184,11 +184,15 @@ h3{
 }
 
 #menu-toggle{
-  /*margin-right: 15px;*/
+  margin-top: 6px;
   width: 33%;
 }
 
 /* CONTENT */
+
+/*.main-content{
+  margin-top:
+}*/
 
 .headline{
   font-family: 'leaque-spartan';
@@ -250,7 +254,7 @@ h3{
 
 .div-box1 {
   position: absolute;
-  background-color: #ec008c;
+  background-color: #61ffc9;
   width: 3000px;
   height: 35px;
   opacity: 0.9;
@@ -264,7 +268,7 @@ h3{
   background-color: #f9ff00;
   width: 3000px;
   height: 30px;
-  opacity: 0.9;
+  opacity: 0.6;
   top: 70px;
   left: -35px;
   box-shadow: -25px 37px 40px black;
