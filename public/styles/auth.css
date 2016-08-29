@@ -1,24 +1,3 @@
-@font-face {
-  font-family: Nexa-Bold;
-  src: url('fonts/Nexa-Bold.otf');
-}
-@font-face {
-  font-family: Nexa-Light;
-  src: url('fonts/Nexa-Light.otf');
-}
-@font-face {
-  font-family: Chunkfive;
-  src: url('fonts/Chunkfive.otf');
-}
-
-body{
-  margin:auto;
-  background-image: url('imgs/hand-held-sandy1.jpg');
-  /*background-image: url('imgs/hand-held-sandy-color.jpg');*/
-  background-position:center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 #wrapper{
   padding-left: 0;
   -webkit-transition: all 0.5s ease;
@@ -32,13 +11,15 @@ form {
 }
 
 #tabs {
-    margin: 40px auto;
-    width: 480px;
+    margin: 50px auto;
+    width: 400px;
 }
 
 #tabs h1 {
     margin: 0;
     padding: 30px;
+    font-family: 'leaque-spartan';
+    color: #000;
 }
 
 .tab-content {
@@ -55,16 +36,44 @@ form {
     box-sizing: border-box;
 }
 
+.main-btn{
+    background-color: #ec008b;
+    border-color: #ec008B;
+}
+
 #login, #register{
   background-color: #fff;
 }
 
-/* Left Section */
+/* Right Section */
 
-.left-auth-col{
- margin: 50px auto;
- width: 400px;
- height: 400px;
- background-color: #000;
+.right-auth-col{
+ margin: 50px 50px auto;
+ background-image: url('/styles/imgs/rear-truck1.jpg');
+ background-repeat: no-repeat;
+ background-size: cover;
  box-shadow: 10px 10px 0px 0px rgba(255,255,255,1);
+
+}
+.right-content{
+  padding: 50px;
+  margin: 50px 50px auto;
+}
+.right-content h2{
+  margin-left: -50px;
+  font-size: 40px;
+  color: #61ffc9;
+}
+
+.definition{
+  background-color: #fff;
+  box-shadow: 10px 10px 0px 0px rgba(0,0,0,1);
+  color: black;
+  padding: 20px;
+  margin: 0px 60px 0px 0px;
+  width: 250px;
+  font-family: 'Bodini-72';
+}
+.definition h3{
+  font-family: 'Bodini-72';
 }
