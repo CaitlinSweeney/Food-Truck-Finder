@@ -31,7 +31,7 @@ app.post('*', bodyParser.json(), bodyParser.urlencoded({ extended: true }));
 app.set('view engine','html'); // allows us to specify the default extension for the files in the views folder
 app.engine('html', ejs.renderFile); // this is the function that binds to res.render
 
-mongoose.connect('mongodb://localhost/foodTrucks', (mongooseErr) => {
+mongoose.connect('mongodb://localhost/Trucks', (mongooseErr) => {
     if( mongooseErr ) {
         console.error('#ERROR#'.red,'Could not initilize mongoose!', mongooseErr);
     } else {
@@ -50,7 +50,7 @@ app.listen(port, (error)=>{
     }
 });
 
- if (process.env.NODE_ENV!=="development"){
+if ( process.env.NODE_ENV !== "development" ){
    HTTPS.createServer({
       key:  fs.readFileSync('/etc/ssl/private/truckgrubhub.com.pem'),
       cert: fs.readFileSync('/etc/ssl/private/truckgrubhub.com.crt')
