@@ -1,12 +1,14 @@
 require('colors');
 
 var express = require('express'),
+    HTTPS = require('https'),
     logger = require('morgan'),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
     Routes = require('./routes'),
     path = require('path'),
     ejs = require('ejs'),
+    fs = require('fs'),
     sessions = require('client-sessions'),
     port = process.env.PORT || 1300,
     app = express();
@@ -47,3 +49,10 @@ app.listen(port, (error)=>{
         console.log("Our trucks are revin' to go!" .yellow, port);
     }
 });
+
+ if (process.env.NODE_ENV!=="development"){
+   HTTPS.createServer({
+      key:  fs.readFileSync('/etc/ssl/private/truckgrubhub.com.pem'),
+      cert: fs.readFileSync('/etc/ssl/private/truckgrubhub.com.crt')
+    }, app).listen( 443 );
+}

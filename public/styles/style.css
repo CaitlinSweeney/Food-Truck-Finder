@@ -152,7 +152,7 @@ h1, h2, h3{
 }
 
 .navbar-brand > img{
-  margin: -138px -200px 10px;
+  margin: -59px -61px auto;
   position: absolute;
   display: inline;
   transition: 1s;
@@ -230,7 +230,7 @@ h1, h2, h3{
   margin-top: 24px;
 }
 
-.seach{
+.search{
     margin-top: 24px;
 }
 
@@ -239,7 +239,7 @@ h1, h2, h3{
 }
 
 .main-content{
-  margin-top:55px;
+  margin-top:0px;
 }
 /* MAP */
 
