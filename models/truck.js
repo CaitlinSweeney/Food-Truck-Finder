@@ -1,8 +1,7 @@
 var mongoose = require('mongoose'),
 
     TruckSchema = new mongoose.Schema({
-        truckName:  String,
-        email: String,
+        name:  String,
         description : String,
         types : Object,
         location : Array,
@@ -10,9 +9,5 @@ var mongoose = require('mongoose'),
         hours : String,
         website : String,
         image : String,
-        created: {
-            type: Number,
-            default: () => Date.now()
-        }
     });
 module.exports = mongoose.model('Truck', truckSchema);

@@ -44,6 +44,6 @@ app.listen(port, (error)=>{
         console.error('The Trucks are not starting!', error);
         process.exit(1); // exits a node application, anything other than 0 is considered an error
     } else {
-        console.log("Our trucks are revin' to go!" .yellow);
+        console.log("Our trucks are revin' to go!" .yellow, port);
     }
 });
