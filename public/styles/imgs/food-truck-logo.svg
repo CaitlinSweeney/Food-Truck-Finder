@@ -31,7 +31,7 @@
 		</g>
 	</g>
 </g>
-<rect x="65.667" y="327.96" display="none" fill="#030202" width="374" height="216"/>
+<rect x="-243.333" y="327.96" display="none" opacity="0.6" fill="#030202" width="785" height="409"/>
 <g id="Layer_7">
 </g>
 <g display="none">
@@ -279,10 +279,10 @@
 	</g>
 </g>
 <polygon fill="#EB008B" points="111.468,453.597 164.312,545.127 217.155,636.657 111.468,636.657 5.781,636.657 58.625,545.127 "/>
-<polygon opacity="0.9" fill="#2B2C6B" stroke="#2B2C6B" stroke-miterlimit="10" points="145.483,441.788 195.105,538.763 
-	244.732,635.738 145.483,635.738 46.233,635.738 95.856,538.763 "/>
-<polygon opacity="0.9" fill="#FDED16" points="68.624,487.243 107.687,561.949 146.75,636.657 68.624,636.657 -9.495,636.657 
-	29.569,561.949 "/>
+<polygon opacity="0.9" fill="#2B2C6B" points="145.795,442.725 195.417,539.7 245.044,636.675 145.795,636.675 46.545,636.675 
+	96.168,539.7 "/>
+<polygon opacity="0.9" fill="#FDED16" points="68.874,487.556 107.937,562.261 147,636.969 68.874,636.969 -9.245,636.969 
+	29.819,562.261 "/>
 <polygon opacity="0.9" fill="#59A7D6" points="192.075,483.17 223.235,560.047 254.399,636.918 192.075,636.918 129.75,636.918 
 	160.914,560.047 "/>
 <path fill-rule="evenodd" clip-rule="evenodd" fill="#FDED16" d="M274.354,619.864c0,9.55-7.735,17.289-17.286,17.289
@@ -290,6 +290,6 @@
 <path fill-rule="evenodd" clip-rule="evenodd" fill="#FDED16" d="M382.429,620.309c0,9.547-7.74,17.292-17.286,17.292
 	s-17.289-7.741-17.289-17.292c0-9.548,7.743-17.287,17.289-17.287S382.429,610.761,382.429,620.309z"/>
 <text transform="matrix(1 0 0 1 204.2769 507.6743)" fill="#FFFFFF" font-family="'YikesMedium'" font-size="37.3251" letter-spacing="3">grub</text>
-<text transform="matrix(1 0 0 1 -31.8042 637.2515)" opacity="0.8" fill="#FFFFFF" font-family="'Phosphate-Inline'" font-size="173.9908">TRK</text>
+<text transform="matrix(1 0 0 1 -31.6792 637.0015)" opacity="0.8" fill="#FFFFFF" font-family="'Phosphate-Inline'" font-size="173.9908">TRK</text>
 <text transform="matrix(1 0 0 1 263.0015 531.4009)" fill="#FFFFFF" font-family="'YikesMedium'" font-size="37.3251" letter-spacing="1">hub</text>
 </svg>

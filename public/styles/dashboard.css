@@ -14,6 +14,7 @@ body {
 }
 
 .dashboard {
+    margin-top: 75px;
     padding-top:20px;
     padding-bottom:20px;
     background-color: #fff;
@@ -23,15 +24,11 @@ body {
     width: 100%;
 }
 
-.dashboard h1 {
-    font-family: 'leaque-spartan',sans-serif;
-}
-
 .dash-truck{
   position: absolute;
-  top: 690px;
-  left: 525px;
-  width: 300px;
+  top: 752px;
+  left: 497px;
+  width: 344px;
 }
 
 .user-profile {
@@ -58,7 +55,7 @@ body {
 }
 
 .sign-out{
-    top: -100px;
+    top: -105px;
     margin-left: 15px;
 }
 .sign-out h4{

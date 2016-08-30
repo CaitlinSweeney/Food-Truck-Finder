@@ -25,13 +25,10 @@ body {
     color: #fff;
   }
 
-h1, h2{
-  font-family: 'Bodini-72';
-}
-
-h3{
+h1, h2, h3{
   font-family: 'leaque-spartan';
 }
+
 /*SIDE BAR*/
 
 #wrapper {
@@ -185,7 +182,7 @@ h3{
 }
 
 #menu-toggle{
-  margin-top: 6px;
+  margin: 6px 0px 6px 0px;
   width: 33%;
 }
 
@@ -222,20 +219,21 @@ h3{
   background-color: #000;
 }
 
-#custom-search-input{
-  display:inline;
-  margin-top:2%;
-  width: 77%;
-  padding-left: 15px;
-}
 #custom-search-input input{
   width: 75%;
   margin-left: 15px;
+  margin-top: 24px;
 }
+
 #custom-search-input button{
   background-color: #ec008b;
-  width:
+  margin-top: 24px;
 }
+
+.seach{
+    margin-top: 24px;
+}
+
 .btn-info{
   border-color: #ec008b;
 }
@@ -358,58 +356,20 @@ footer {
   left: -40px;
 }
 
-/*.foot1{
-  transform: rotate(10deg);
-  position: absolute;
-  left: 20px;
-}
-.foot2{
-  transform: rotate(-10deg);
-  position: absolute;
-  left: 50px;
-}
-.foot3{
-  transform: rotate(-10deg);
-  position: absolute;
-  left: 100px;
-}
-.foot4{
-  transform: rotate(20deg);
-  position: absolute;
-  left: 140px;
-}
-.foot5{
-  transform: rotate(20deg);
-  position: absolute;
-  left: 200px;
-}
-.foot6{
-  transform: rotate(20deg);
-  position: absolute;
-  left: 260px;
-}*/
-
-
-
-
-
 /* MEDIA QUERIES */
 
 @media only screen and (max-device-width:720px){
-  .div-box1, .div-box2-2 {
-    display: none;
-  }
-  .div-box2, .div-box3, .div-box4 {
-    display: none;
-  }
+   .sidebar-nav > .sidebar-brand{
+     width: 45%;
+     margin: -128px -152px 10px;
+   }
+   .footer-imgs{
+     display: none;
+   }
+
 }
 @media only screen and (max-width:720px){
-  .div-box1, .div-box2-2 {
-    display: none;
-  }
-  .div-box2, .div-box3, .div-box4 {
-    display: none;
-  }
+
 }
 
 @media(min-width:768px) {

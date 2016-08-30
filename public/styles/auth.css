@@ -6,6 +6,10 @@
   transition: all 0.5s ease;
 }
 
+.logins{
+  margin-top:70px;
+}
+
 form {
     padding: 0 30px;
 }
@@ -62,12 +66,13 @@ form {
 }
 .right-content{
   padding: 50px;
-  margin: 50px 50px auto;
+  margin: 87px 50px auto;
 }
 .right-content h2{
   margin-left: -50px;
   font-size: 40px;
-  color: #61ffc9;
+  color: #fff;
+  letter-spacing: 2pt;
 }
 
 .definition{
@@ -78,10 +83,7 @@ form {
   margin: 0px 60px 0px 0px;
   width: 250px;
   font-family: 'Bodini-72';
-  font-size: 18px;
-}
-.definition h3{
-  font-family: 'Bodini-72';
+  font-size: 16px;
 }
 /*.definition p{
   font-family: 'Bodini-72';
