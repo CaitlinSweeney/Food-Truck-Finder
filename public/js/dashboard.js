@@ -49,11 +49,11 @@ function Dashboard(truckFactory) {
               truckFactory.createUser({location: myTruck.location});
 
             }, function() {
-              handleLocationError(true, marker, myTruck.map.getCenter());
+              handleLocationError(true, myTruck.marker, myTruck.map.getCenter());
             });
           } else {
             // Browser doesn't support Geolocation
-            handleLocationError(false, marker, myTruck.map.getCenter());
+            handleLocationError(false, myTruck.marker, myTruck.map.getCenter());
           }
           function handleLocationError(browserHasGeolocation, infoWindow, pos) {
             myTruck.infoWindow.setPosition(pos);

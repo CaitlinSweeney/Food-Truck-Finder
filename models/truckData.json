@@ -1,5 +1,6 @@
 var myTrucks = [{
-    "username" : "",
+    "fullName" : "",
+    "email" : "caitlin.marie.sweeney@gmail.com",
     "truck name" : "Street Frites LLC",
     "description" : "",
     "type" : ["sandwiches", "gluten-free", "steak", "french fries", "burgers", "tacos"],
@@ -10,29 +11,29 @@ var myTrucks = [{
     "image" : "styles/imgs/orange-truck1.jpg"
   },
   {
-    "username" : "",
+    "fullName" : "",
     "truck name" : "McDevitt Taco Supply",
     "description" : "Super heady and delicious tacos made to order! We use local and organic ingredients whenever possible to bring you food that tastes great and is environmentally responsible.",
     "type" : ["tacos", "mexican", "quesadillas", "seafood"],
-    "location ":  [40.017999, -105.27846],
+    "location":  [40.017999, -105.27846],
     "number" : "(720) 934-4694",
     "hours" : "Monday-Saturday: 11:00 AM - 03:00 PM",
     "website" : "http://www.mcdevitttacosupply.com/",
     "image" : "styles/imgs/mcdevitt-taco-truck.jpg"
   },
   {
-    "username" : "",
+    "fullName" : "",
     "truck name" : "Biker Jims Gourmet Dogs",
     "description" : "Biker Jims craveable concept pimps 15 gourmet sausages, ranging from wild boar and Alaskan reindeer to pheasant cordon bleu and an award-winning vegan dog.",
     "type" : ["hot dogs", "sausage", "sandwiches","vegan"],
     "location" : [39.747861, -104.99565],
-    "number ": "(303) 550-8231",
+    "number": "(303) 550-8231",
     "hours" : "Monday-Friday 10:30 AM - 03:30 PM",
     "website" : "http://www.bikerjimsdogs.com/",
     "image" : "styles/imgs/biker-jim.jpg"
   },
   {
-    "username" : "",
+    "fullName" : "",
     "truck name" : "Waffle Up!",
     "description" : "These aren't your Grandma's Waffles! Serving up authentic Belgian Liege waffles!",
     "type" : ["breakfast", "waffles", "gluten-free"],
@@ -43,7 +44,7 @@ var myTrucks = [{
     "image" : "styles/imgs/waffleup.jpg"
   },
   {
-    "username" : "",
+    "fullName" : "",
     "truck name" : "Thai Cart",
     "description" : "Traditional Spicy Pad-Thai Food, Fried Appetizers, Drunken Noodles, Crab Wontons",
     "type" : ["Asian", "Thai", "gluten-free", "noodles", "wraps"],
@@ -54,7 +55,7 @@ var myTrucks = [{
     "image" : "styles/imgs/white-truck1.jpg"
   },
   {
-    "username" : "",
+    "fullName" : "",
     "truck name" : "Corner of Gourmet",
     "description" : "Gyros, reuben egg rolls, pulled pork tacos, black bean burgers.",
     "type" : ["healthy food", "tacos", "sandwiches","vegetarian"],
@@ -65,7 +66,7 @@ var myTrucks = [{
     "image" : "styles/imgs/corner-gourmet.jpg"
   },
   {
-    "username" : "",
+    "fullName" : "",
     "truck name" : "Amore Pizza",
     "description" : "Kick-Ass NY style Pizza Slices. Our dough is made fresh daily and the tomato sauce for our pizza is imported from the San marzano valley in Italy",
     "type" : ["hot food", "pizza","vegetarian","Italian"],
@@ -75,7 +76,7 @@ var myTrucks = [{
     "image" : "styles/imgs/white-truck1.jpg"
   },
   {
-    "username" : "",
+    "fullName" : "",
     "truck name" : "Hey P+J",
     "description" : "We make delicous Peanut Butter and Jelly Sandwiches and sometimes meatballs!",
     "type" : ["sandwiches","meatballs"],
@@ -86,7 +87,7 @@ var myTrucks = [{
     "image" : "styles/imgs/pbandj.jpg"
   },
   {
-    "username" : "",
+    "fullName" : "",
     "truck name" : "Verde Food Truck",
     "description" : "Verde is dedicated to serving authentic, fresh, flavorful, Sonoran Mexican street food to Boulder and the surrounding area.",
     "type" : ["mexican", "tacos", "vegetarian", "burritos"],
@@ -97,7 +98,7 @@ var myTrucks = [{
     "image" : "styles/imgs/verde-truck.jpg"
   },
   {
-    "username" : "",
+    "fullName" : "",
     "truck name" : "Saj Mediterranean Grill",
     "description" : "Fresh, natural and healthy Mediterranean cuisine in a fast-casual environment.",
     "type" : ["greek", "mediterranean","middle eastern", "vegan", "vegetarian"],
@@ -108,7 +109,7 @@ var myTrucks = [{
     "image" : "styles/imgs/yummer-truck.jpg"
   },
   {
-    "username" : "",
+    "fullName" : "",
     "truck name" : "R U Cereal Food Truck",
     "description" : "Breakfast meets Dessert… Falls in love… Has food truck love child.. And R U Cereal Food Truck is born",
     "type" : ["breakfast", "cereal","dessert", "vegan", "gluten-free"],
@@ -119,7 +120,7 @@ var myTrucks = [{
     "image" : "styles/imgs/cereal-truck.jpg"
   },
   {
-    "username" : "",
+    "fullName" : "",
     "truck name" : "Mile High Thai",
     "description" : "Thai food sourced only the best ingredients with herbs, spices directly from Thailand for our sweet soy sauce. Delivery Available",
     "type" : ["asian","druken-noodles", "vegan", "vegetarian", "pad-thai", "egg rolls", "gluten-free"],
