@@ -120,7 +120,7 @@ h1, h2, h3{
     color: #000;
 }
 .sidebar-nav > .sidebar-brand h3{
-  font-size: 20px;
+  font-size: 24px;
 }
 .sidebar-nav > .sidebar-brand a {
     color: #999999;
@@ -237,6 +237,9 @@ nav{
   margin: 0px 40px 21px 0px;
 }
 
+.left-nav h3{
+  font-size: 30px;
+}
 
 .left-nav h3, .left-nav p{
   margin: 5px 20px;
@@ -357,14 +360,17 @@ footer {
   color: #fff;
 }
 
+.burger {
+  width: 250px;
+  position: absolute;
+  top: 570px;
+  left: 200px;
+}
+
 .feat-trucks-row{
   background-color: rgba(0, 0, 0, 0.6);
   padding: 20px 40px 0px 40px;
       margin-top: 10px;
-}
-
-.feat-trucks-row h3{
-  font-size:
 }
 
 .feat-trucks{
@@ -373,13 +379,13 @@ footer {
   padding: 5px;
 }
 
-.footer-imgs img{
+/*.footer-imgs img{
   display: inline;
   position: absolute;
   z-index: -100;
   top: -225px;
   left: -40px;
-}
+}*/
 
 /* MEDIA QUERIES */
 

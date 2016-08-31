@@ -68,12 +68,13 @@ body {
   color:#000;
   width: 90%;
   margin: 15px;
-  background-color: #a0e9ff;
+  background-color: #8bdaff;
 }
 .logout-btn:hover{
+  color: #fff;
   width: 90%;
   margin: 15px;
-  background-color: #80bacc;
+  background-color: #69cfff;s;
 }
 
 .table-bg{

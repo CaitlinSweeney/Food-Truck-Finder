@@ -53,9 +53,10 @@ form {
   background-color: rgba(255,255,255,0.7);
 }
 
+
 /* Right Section */
 
-.right-auth-col{
+/*.right-auth-col{
  margin: 50px 50px auto;
  background-image: url('/styles/imgs/rear-truck2.jpg');
  background-repeat: no-repeat;
@@ -84,7 +85,4 @@ form {
   width: 250px;
   font-family: 'Bodini-72';
   font-size: 16px;
-}
-/*.definition p{
-  font-family: 'Bodini-72';
 }*/
