@@ -39,6 +39,7 @@ mongoose.connect('mongodb://localhost/Trucks', (mongooseErr) => {
     }
 });
 
+
 Routes(app);
 
 app.listen(port, (error)=>{
@@ -49,6 +50,13 @@ app.listen(port, (error)=>{
         console.log("Our trucks are revin' to go!" .yellow, port);
     }
 });
+// app.use(function(err, req, res, next){
+//   console.error(err.stack)
+//   res.status(404).send({
+//     status: 404,
+//     message: 'Page Not Found!'
+//   })
+// });
 
 if ( process.env.NODE_ENV !== "development" ){
    HTTPS.createServer({
