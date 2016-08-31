@@ -60,7 +60,6 @@ function checkGeo(){
        } // put markers on map
      })
      truck.dummyMarkers = function(){
-       console.log("dummy data", truck.dummyData)
        for (let i=0; i<truck.dummyData.length; i++){
          truck.marker = new google.maps.Marker({
            position : truck.dummyData[i],
