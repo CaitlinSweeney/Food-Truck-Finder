@@ -131,16 +131,18 @@ h1, h2, h3{
 }
 
 #menu-toggle{
+    color: #000;
     font-size: 16px;
     font-weight: 400;
     margin: 0px 15px 0px;
     width: 33%;
-    background-color: #a0e9ff;
+    background-color: #8bdaff;
     border: none;
 }
 
 #menu-toggle:hover{
-    background-color: #90e5ff;
+    background-color: #69cfff;
+    color: #fff;
 }
 
 #menu-toggle:focus{
@@ -174,7 +176,7 @@ nav{
 }
 
 .navbar-brand > img{
-  margin: -59px -61px auto;
+  margin: -55px -115px auto;
   position: absolute;
   display: inline;
   transition: 1s;
@@ -192,6 +194,8 @@ nav{
 .navbar .navbar-collapse {
   text-align: center;
   padding-top: 5px;
+  font-size: 20px;
+
   /*border-bottom: 1px #fff solid;*/
 }
 
@@ -352,9 +356,15 @@ footer {
 .list-footer a:hover{
   color: #fff;
 }
+
 .feat-trucks-row{
   background-color: rgba(0, 0, 0, 0.6);
   padding: 20px 40px 0px 40px;
+      margin-top: 10px;
+}
+
+.feat-trucks-row h3{
+  font-size:
 }
 
 .feat-trucks{
