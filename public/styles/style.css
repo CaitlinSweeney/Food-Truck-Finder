@@ -182,8 +182,13 @@ nav{
 .navbar .navbar-collapse a{
   color: #fff;
 }
-.navbar .navbar-collapse li a:hover{
-  color: #000
+.navbar .navbar-collapse a:hover{
+  color: #f9ff00;
+  background: transparent;
+}
+
+.navbar .navbar-collapse a:hover{
+  color: #f9ff00;
   background: transparent;
 }
 
@@ -194,9 +199,13 @@ nav{
 
 /* CONTENT */
 
-/*.main-content{
-  margin-top:
-}*/
+.main-content{
+  padding-top:20px;
+}
+
+.main-header{
+  text-align: center;
+}
 
 .headline{
   font-family: 'leaque-spartan';
@@ -206,9 +215,19 @@ nav{
   text-align: right;
   font-style: italic;
 }
-.left-nav h3{
-  padding-top: 5px;
+.left-nav h3, .left-nav p{
+  margin: 5px 20px;
+  color: #000;
 }
+
+.search-buttons {
+  background-color: rgba(251, 235, 22, 0.6);
+  padding: 18px 0px 20px 20px;
+
+  box-shadow: -25px 37px 40px black;
+
+}
+
 #filters.btn-group.btn-group-vertical{
   width: 90%;
   padding-left: 15px;
@@ -228,25 +247,21 @@ nav{
 #custom-search-input input{
   width: 75%;
   margin-left: 15px;
-  margin-top: 24px;
 }
 
 #custom-search-input button{
   background-color: #ec008b;
-  margin-top: 24px;
+  border-radius: 0px 4px 4px 0px;
 }
 
 .search{
-    margin-top: 24px;
+    margin-top: 10px;
 }
 
 .btn-info{
   border-color: #ec008b;
 }
 
-.main-content{
-  margin-top:0px;
-}
 /* MAP */
 
 #map{
@@ -258,30 +273,9 @@ nav{
 .map-header{
   margin-bottom: 0px;
 }
+
 /* BG ELEMENTS */
 
-.div-box1 {
-  position: absolute;
-  background-color: #61ffc9;
-  width: 1400px;
-  height: 35px;
-  opacity: 0.9;
-  top: 151px;
-  left: -35px;
-  box-shadow: -25px 37px 40px black;
-}
-
-/*.div-box2 {
-  position: absolute;
-  background-color: #f9ff00;
-  width: 3000px;
-  height: 30px;
-  opacity: 0.6;
-  top: 70px;
-  left: -35px;
-  box-shadow: -25px 37px 40px black;
-  z-index: -100;
-}*/
 
 @-webkit-keyframes mymove {
     from {left: 249px;}
@@ -306,7 +300,8 @@ nav{
 
 /* BOTTOM CONTENT */
 
-.overlay:before{
+
+.overlay img:before{
   position: absolute;
   content:" ";
   top:0;
@@ -338,10 +333,15 @@ footer {
 .list-footer a:hover{
   color: #fff;
 }
+.feat-trucks-row{
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px 40px 0px 40px;
+}
+
 .feat-trucks{
-  background: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.9);
   color: #fff;
-  padding: 8px;
+  padding: 5px;
 }
 
 .footer-imgs img{

@@ -32,7 +32,7 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <h3>Active Trucks in Your Area!</h3>
+                    <h3>Active Trucks List</h3>
                 </li>
 
                 <li class="tlist" ng-repeat=
@@ -99,15 +99,17 @@
 
         <div class="container">
 
+          <div class="row text-center main-header">
+          <h3 style="color:#fff">Food Trucks at Your Fingertips</h3>
+          </div>
 
             <div class="col md-8 main-content">
             </div>
 
             <div class="row">
-                <div class="col-md-4 left-nav">
+                <div class="col-md-4 left-nav search-buttons">
                     <h3>Whatchu Cravin'?</h3>
 
-                    <p style="color:#fff">Check truck information for availability.</p>
                     <div aria-label="food types" class=
                     "btn-group btn-group-vertical myButtons" id="filters" role=
                     "group">
@@ -184,25 +186,17 @@
                 <!-- button and search -->
 
                 <div class="col-md-8 mapheader">
-                    <h2 class="headline">Tasty Street Eatin'</h2>
+									  <div class="row">
+                    <!-- <h2 class="col-sm-6 headline">Tasty Street Eatin'</h2> -->
+                    <div> <a class="col-sm-6 btn btn-default" href="#menu-toggle" id="menu-toggle" ng-click="truck.activeLocMarkers()">List View</a>	</div>
 
-                    <p style="color:#fff">Bringing your jonesin' belly to food trucks in your
-                    area.</p>
-
-										<a class="btn btn-default" href="#menu-toggle" id="menu-toggle"
-										ng-click="truck.activeLocMarkers()">List View</a>
-
-                    <!-- <img class="mini-truck" src="styles/imgs/mini-truck.png"><img> -->
-
+                    <p class="col-sm-6" style="color:#fff">Currently active trucks in your area.</p>
+									</div>
 								    <!-- MAP -->
-
-
                     <div class="image-responsive" id="map">
                     </div>
-                </div>
 
-                <div>
-                </div>
+                </div> <!-- End MAP -->
 
                 <div class="row">
                     <div class="col-lg-12">
@@ -213,10 +207,10 @@
                 <!-- /.row -->
                 <!-- Trucks Featured -->
 
-                <div class="row text-center">
+                <div class="row text-center feat-trucks-row">
                     <div class="col-md-3 col-sm-6 hero-feature">
-                        <div class="thumbnail">
-                            <img alt="" src="styles/imgs/cereal-truck.jpg" class="overlay">
+                        <div class="thumbnail overlay">
+                            <img alt="" src="styles/imgs/cereal-truck.jpg">
 
                             <div class="feat-trucks ">
                                 <h4>Cereal Food Truck</h4>
@@ -231,7 +225,7 @@
                         <div class="thumbnail">
                             <img alt="" src="styles/imgs/mile-high-thai.jpg">
 
-                            <div class="feat-trucks overlay">
+                            <div class="feat-trucks">
                                 <h4>Mile High Thai</h4>
 
                                 <p>Lorem ipsum dolor sit amet, consectetur
@@ -242,7 +236,7 @@
 
                     <div class="col-md-3 col-sm-6 hero-feature">
                         <div class="thumbnail">
-                            <img alt="" src="styles/imgs/orange-truck1.jpg">
+                            <img alt="" src="styles/imgs/white-truck1.jpg">
 
                             <div class="feat-trucks overlay">
                                 <h4>Veggies and Fruits</h4>
