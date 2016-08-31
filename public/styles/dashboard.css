@@ -25,7 +25,7 @@ body {
 }
 
 .dashboard h1{
-  font-size: 45px;
+  font-size: 35px;
 }
 
 .dash-truck{
@@ -48,37 +48,36 @@ body {
     width: 90%;
     margin: 15px;
     background-color: #ec008b;
-    border-color: #ec008B;
+    border-color: none;
 }
 
 .user-prof-btn:hover {
     width: 90%;
     margin: 15px;
-    background-color: #f7a4d9;
-    border-color: #f7a4d9;
+    background-color: #ec3aa0;
+    border-color: none;
 }
 
-.sign-out{
-    top: -105px;
+/*.sign-out{
     margin-left: 15px;
 }
 .sign-out h4{
   margin-left: 15px;
-}
-.sign-out a{
-    width: 90%;
-    margin: 15px;
-    background-color: #f6ff00;
-    border-color: #f6ff00;
-    color: #000;
+}*/
+.sign-out {
+    text-align: center;
 }
 
-.sign-out a:hover{
-    width: 90%;
-    margin: 15px;
-    background-color: #ff6c00;
-    border-color: #ff6c00;
-    color: #000;
+.logout-btn{
+  color:#fff;
+  width: 90%;
+  margin: 15px;
+  background-color: #ff6c00;
+}
+.logout-btn:hover{
+  width: 90%;
+  margin: 15px;
+  background-color: #ff6c00;
 }
 
 .table-bg{

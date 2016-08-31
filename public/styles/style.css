@@ -130,6 +130,22 @@ h1, h2, h3{
     background: none;
 }
 
+#menu-toggle{
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px 15px 0px;
+    width: 33%;
+    background-color: #a0e9ff;
+    border: none;
+}
+
+#menu-toggle:hover{
+    background-color: #90e5ff;
+}
+
+#menu-toggle:focus{
+  color: #fff;
+}
 
 /*NAVAGATION BAR*/
 
@@ -192,10 +208,6 @@ nav{
   background: transparent;
 }
 
-#menu-toggle{
-  margin: 6px 0px 6px 0px;
-  width: 33%;
-}
 
 /* CONTENT */
 
@@ -205,6 +217,10 @@ nav{
 
 .main-header{
   text-align: center;
+  margin: 0px 0px 30px 0px;
+}
+.main-header h2{
+  margin: 0px 0px 30px 0px;
 }
 
 .headline{
@@ -214,7 +230,10 @@ nav{
 .mapheader p{
   text-align: right;
   font-style: italic;
+  margin: 0px 40px 21px 0px;
 }
+
+
 .left-nav h3, .left-nav p{
   margin: 5px 20px;
   color: #000;
