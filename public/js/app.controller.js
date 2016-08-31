@@ -17,11 +17,16 @@ function truckCtrl(truckFactory, $http){
       center: new google.maps.LatLng(39.7392,-104.9903),
       mapTypeId: 'terrain',
     });
-    // truck.marker = new google.maps.Marker({
-    //   icon: truck.icon,
-    //   map: truck.map
-    // });
-    console.log('Ctrl : ', truck)
+    truck.dummyData = [
+      {lat: 40.017999, lng: -105.27846},
+      {lat: 39.747861, lng: -104.99565},
+      {lat: 39.747861, lng: -104.99565},
+      {lat: 39.721284, lng: -104.99391},
+      {lat: 39.899537, lng: -105.11344},
+      {lat: 39.726527, lng: -104.998373},
+      {lat: 40.030726, lng: -105.257566},
+      {lat: 39.590832, lng: -104.962217}
+    ]
 
 // GEOLOCATION
 
@@ -52,13 +57,19 @@ function checkGeo(){
            map : truck.map,
            icon : truck.icon,
          });
-       }; // put markers on map
-       truck.clearMarkers = function(){
-        for(i=0; i < truck.allMarkers.length; i++){
-          truck.allMarkers.setMap(null);
-        }
-       } // clear markers
+       } // put markers on map
      })
+     truck.dummyMarkers = function(){
+       console.log("dummy data", truck.dummyData)
+       for (let i=0; i<truck.dummyData.length; i++){
+         truck.marker = new google.maps.Marker({
+           position : truck.dummyData[i],
+           map : truck.map,
+           icon : truck.icon,
+         });
+       }
+     }
+   truck.dummyMarkers();
  } // end GEOLOCATION
 
 
