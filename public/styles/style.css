@@ -405,7 +405,7 @@ footer {
   }
   .burger {
     position: absolute;
-    top: 750px;
+    top: 850px;
     left: 148px;
     /* z-index: 2; */
     width: 66%;
