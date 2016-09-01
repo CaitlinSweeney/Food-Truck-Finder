@@ -46,7 +46,7 @@ module.exports = {
                         console.warn('Password did not match!'.yellow);
                         res.status(403).json(errors.login);
                     } else {
-                        req.session.user = { id: user._id, truckName: user.truckName };
+                        req.session.user = { id: user._id, truckName: user.truckName, fullName: user.fullName, phone: user.phone, email: user.email, types: user.types };
                         delete user.password; // just for securty, delete the password before sending it to the front-end;
                         User.update({_id:user._id}, {$set: {loggedIn: true}}, (err, res) =>{
                           if(err){
@@ -73,7 +73,7 @@ module.exports = {
                 res.status(500).send(errors.general);
             } else {
                 console.log('New user created in MongoDB:', user);
-                req.session.user = { id: user._id, truckName: user.truckName }
+                req.session.user = { id: user._id, truckName: user.truckName, fullName: user.fullName, phone: user.phone, email: user.email, types: user.types };
                 User.update({_id:user._id}, {$set: {loggedIn: true}}, (err, res) =>{
                   if(err){
                     console.log("register loggedIn", err)
