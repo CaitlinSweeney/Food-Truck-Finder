@@ -29,6 +29,7 @@ h1, h2, h3{
   font-family: 'leaque-spartan';
 }
 
+
 /*SIDE BAR*/
 
 #wrapper {
@@ -319,9 +320,7 @@ nav{
   animation-timing-function: ease;
 }
 
-
 /* BOTTOM CONTENT */
-
 
 .overlay img:before{
   position: absolute;
@@ -357,10 +356,11 @@ footer {
 }
 
 .burger {
-  width: 250px;
   position: absolute;
-  top: 570px;
-  left: 200px;
+  top: 525px;
+  left: 148px;
+  /* z-index: 2; */
+  width: 66%;
 }
 
 .feat-trucks-row{
@@ -390,13 +390,26 @@ footer {
      width: 45%;
      margin: -128px -152px 10px;
    }
-   .footer-imgs{
+   /*.footer-imgs{
      display: none;
-   }
+   }*/
 
 }
-@media only screen and (max-width:720px){
-
+@media only screen and (min-width:1380px){
+  .dash-kid{
+    position: absolute;
+    top: 77px;
+    left: 1111px;
+    z-index: 2;
+    width: 22%;
+  }
+  .burger {
+    position: absolute;
+    top: 750px;
+    left: 148px;
+    /* z-index: 2; */
+    width: 66%;
+  }
 }
 
 @media(min-width:768px) {
