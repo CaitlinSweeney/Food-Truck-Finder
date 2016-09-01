@@ -142,11 +142,11 @@ h1, h2, h3{
 
 #menu-toggle:hover{
     background-color: #69cfff;
-    color: #fff;
+    color: #ec008b;
 }
 
-#menu-toggle:focus{
-  color: #fff;
+#menu-toggle:focus, #menu-toggle:active{
+  color: #000;
 }
 
 /*NAVAGATION BAR*/
@@ -409,6 +409,9 @@ footer {
     left: 148px;
     /* z-index: 2; */
     width: 66%;
+  }
+  .tab-content{
+    width: 428px;
   }
 }
 
