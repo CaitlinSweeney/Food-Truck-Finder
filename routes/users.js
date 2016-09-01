@@ -37,7 +37,7 @@ module.exports = {
       req.session.user[newProp]= req.body[newProp];
     }
     console.log("req.session.user", req.session.user)
-    User.findOneAndUpdate({_id : req.session.user._id},
+    User.findOneAndUpdate({_id : req.session.user.id},
       req.session.user,
       {new : true},
       function(err, user){

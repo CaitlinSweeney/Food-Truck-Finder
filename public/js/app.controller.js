@@ -45,6 +45,7 @@ function checkGeo(){
      truckFactory.getUser().then(function(res){
        truck.truckList = res.data;
        for (let i=0; i<truck.truckList.length; i++){
+         console.log(truck.truckList[i])
          var ft = {
            lat: truck.truckList[i].location[0],
            lng: truck.truckList[i].location[1]
@@ -52,6 +53,7 @@ function checkGeo(){
          truck.allMarkers.push(ft)
        }
        for (let i=0; i<truck.allMarkers.length; i++){
+         console.log(truck.allMarkers[i])
           truck.marker = new google.maps.Marker({
            position : truck.allMarkers[i],
            map : truck.map,
